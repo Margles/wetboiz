@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Scout</title>
+<meta name="description" content="A daily digest of new arXiv papers in quantum gravity and nearby fields.">
+<style>
+  :root { --bg: #fbfaf7; --fg: #1d1d1b; --muted: #66645e; --line: #e2dfd6; --accent: #1a4fa0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16171a; --fg: #e6e4de; --muted: #9b988f; --line: #2c2d31; --accent: #8cb4f5; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 17px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 56px 16px 72px; }
+  h1 { font-size: 2.1rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); margin: 0 0 40px; font-size: 1.05rem; }
+  h2 { font: 600 0.8rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; text-transform: uppercase;
+        letter-spacing: 0.08em; color: var(--muted); margin: 44px 0 12px; }
+  p { margin: 0 0 14px; }
+  ol { margin: 0 0 14px; padding-left: 1.6em; }
+  li { margin: 0 0 6px; }
+  .note { color: var(--muted); font-size: 0.95rem; }
+  a { color: var(--accent); }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted);
+            font-size: 0.95rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Dr. Scout</h1>
+  <p class="lede">A daily digest of new arXiv papers in quantum gravity and nearby fields.</p>
+
+  <p>Dr. Scout is a small, private email digest. Every weekday it picks out the new arXiv papers that match one
+  researcher's interests and sends them to a few colleagues.</p>
+
+  <h2>How it works</h2>
+  <p>Each weekday morning a script reads the new submissions and cross-lists in hep-th, gr-qc, hep-ph and
+  astro-ph.CO. Claude, a language model made by Anthropic, reads every title and abstract and rates how well the
+  paper fits the topics listed below.</p>
+  <p>The best matches then go through a quality check. Papers by authors in the curator's research network get this
+  check too, whatever their topic. Claude reads the beginning and end of each paper and looks at its authors'
+  publication records on INSPIRE-HEP. It looks for papers whose claims go well beyond what they actually work out,
+  including papers that seem to be mostly machine-generated text with little physics behind it. A short publication
+  record alone does not count against anyone.</p>
+  <p>Papers that pass are ranked by relevance and quality, with a small boost for authors in the curator's network,
+  and at most 30 go out each day. Each entry comes with a short summary of the paper and both scores.</p>
+  <p class="note">The screening is automated and makes mistakes in both directions. If a paper is missing from the
+  digest, that says very little about the paper.</p>
+
+  <h2>Main topics</h2>
+  <ol>
+    <li>Quadratic / higher-derivative gravity (Stelle gravity, R² + Weyl² actions, fourth-order theories)</li>
+    <li>Weyl (conformal) gravity</li>
+    <li>Ghost problem in QFT and gravity: massive spin-2 ghosts, Lee–Wick theories, Ostrogradsky instability</li>
+    <li>Unitarity of quantum gravity theories</li>
+    <li>PT-symmetric and pseudo-Hermitian (non-Hermitian) quantum mechanics and QFT</li>
+    <li>Covariant operator quantization, BRST, Kugo–Ojima quartet mechanism, indefinite-metric state spaces</li>
+    <li>Classical scale invariance, spontaneous breaking of scale/conformal symmetry, dimensional transmutation (Coleman–Weinberg, Gildener–Weinberg)</li>
+    <li>Dynamical generation of the Planck scale and electroweak scale (&quot;agravity&quot;-type models)</li>
+    <li>Inflation in modified/quadratic gravity (Starobinsky-type, scale-invariant inflation), inflationary observables vs. Planck/BICEP</li>
+    <li>Primordial gravitational waves, tensor power spectrum, tensor-to-scalar ratio</li>
+    <li>Swampland program, cobordism conjecture, R7-branes and other non-supersymmetric branes</li>
+    <li>Codimension-two defects/vortices (Alice strings, cosmic strings) in gravity and supergravity; axio-dilaton gravity; F-theory / IIB backgrounds with SL(2,Z) monodromy</li>
+    <li>Braneworlds and extra dimensions (warped compactifications, Randall–Sundrum-type models, bulk horizons)</li>
+    <li>Hierarchy problems: Planck/electroweak hierarchy, cosmological constant problem</li>
+  </ol>
+
+  <h2>Related topics</h2>
+  <ol start="15">
+    <li>Asymptotic safety and other UV completions of gravity (incl. functional RG for gravity)</li>
+    <li>Non-local / infinite-derivative gravity, ghost-free higher-derivative theories</li>
+    <li>Effective field theory of gravity; positivity, causality and unitarity bounds on higher-derivative terms</li>
+    <li>Graviton scattering amplitudes and perturbative quantum gravity</li>
+    <li>Massive gravity, bimetric gravity, spin-2 field theory (Fierz–Pauli)</li>
+    <li>Black holes and other exact solutions in higher-derivative / modified gravity</li>
+    <li>Scalar–tensor theories, Higgs inflation, non-minimal couplings</li>
+    <li>Trace/Weyl anomalies, conformal field theory coupled to gravity, Weyl geometry</li>
+    <li>Constrained Hamiltonian systems, BV formalism, gauge-fixing and quantization of gauge theories</li>
+    <li>Generalized/higher-form symmetries, solitons, monopoles, topological defects</li>
+    <li>String compactifications, string phenomenology, non-supersymmetric string theory, other swampland conjectures (WGC, distance, de Sitter)</li>
+    <li>Early-universe cosmology beyond inflation (reheating, phase transitions, stochastic GW backgrounds)</li>
+    <li>Classically scale-invariant extensions of the Standard Model; neutrino masses via seesaw / &quot;neutrino option&quot;; dark matter in such models</li>
+  </ol>
+  <p class="note">Left out unless they touch the topics above: experimental/observational papers, lattice QCD, collider phenomenology, condensed matter, quantum information.</p>
+
+  <footer>
+    Questions or suggestions: <a href="mailto:dr.scout@wetboiz.com">dr.scout@wetboiz.com</a>.
+    To stop receiving the digest, use the Unsubscribe button at the bottom of any email.
+  </footer>
+</main>
+</body>
+</html>
