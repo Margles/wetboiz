@@ -13,48 +13,39 @@
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--fg);
          font: 17px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif; }
-  main { max-width: 680px; margin: 0 auto; padding: 56px 16px 72px; }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 72px; }
+  nav { display: flex; justify-content: flex-end; gap: 18px; margin-bottom: 24px;
+        font: 0.9rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  nav a { color: var(--muted); text-decoration: none; }
+  nav a:hover { color: var(--accent); }
   h1 { font-size: 2.1rem; margin: 0 0 4px; letter-spacing: -0.01em; }
-  .lede { color: var(--muted); margin: 0 0 40px; font-size: 1.05rem; }
+  .lede { color: var(--muted); margin: 0 0 32px; font-size: 1.05rem; }
   h2 { font: 600 0.8rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; text-transform: uppercase;
-        letter-spacing: 0.08em; color: var(--muted); margin: 44px 0 12px; }
+       letter-spacing: 0.08em; color: var(--muted); margin: 44px 0 12px; }
   p { margin: 0 0 14px; }
   ul { margin: 0 0 14px; padding-left: 1.3em; }
   li { margin: 0 0 6px; }
   .note { color: var(--muted); font-size: 0.95rem; }
   a { color: var(--accent); }
+  .meta { font: 0.85rem/1.4 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color: var(--muted);
+          margin: 0 0 28px; }
+  .paper { margin: 0 0 26px; }
+  .paper .title { font-weight: 600; text-decoration: none; }
+  .paper .title:hover { text-decoration: underline; }
+  .paper .num { color: var(--muted); }
+  .paper .authors, .paper .scores { font: 0.85rem/1.45 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+                                    color: var(--muted); }
+  .paper .summary { margin: 4px 0 2px; }
   footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted);
-            font-size: 0.95rem; }
+           font-size: 0.95rem; }
 </style>
 </head>
 <body>
 <main>
+  <nav><a href="/about/">About</a></nav>
   <h1>wetboiz Daily Digest</h1>
   <p class="lede">A daily digest of new arXiv papers in quantum gravity and nearby fields.</p>
-
-  <p>Each weekday morning a script reads the new submissions and cross-lists in hep-th, gr-qc, hep-ph, and
-  astro-ph.CO. Claude reads every title and abstract and rates how well the paper fits the topics listed below.</p>
-  <p>The best matches then go through a quality check. Papers by authors in the curator's research network get this
-  check too, whatever their topic. Claude reads the beginning and end of each paper and looks at its authors'
-  publication records on INSPIRE-HEP. It looks for papers whose claims go well beyond what they actually work out,
-  including papers that seem to be mostly machine-generated text with little physics behind it. A short publication
-  record alone does not count against anyone.</p>
-  <p>Papers that pass are ranked by relevance and quality, with a small boost for authors in the curator's network.
-  Each entry comes with a short summary of the paper and both scores.</p>
-  <p class="note">The screening is automated and makes mistakes in both directions. If a paper is missing from the
-  digest, that says very little about the paper.</p>
-
-  <h2>Topics (in no particular order)</h2>
-  <ul>
-    <li>Quantum gravity</li>
-    <li>String theory, F-theory, and M-theory compactifications</li>
-    <li>Branes, defects, and the swampland program</li>
-    <li>Superconformal field theories</li>
-    <li>Higher-derivative gravity and unitarity</li>
-    <li>Inflation and primordial gravitational waves</li>
-    <li>Quantum information</li>
-  </ul>
-
+  <p class="meta">The next digest will appear here after the next arXiv announcement.</p>
   <footer>
     Questions or suggestions: <a href="mailto:dr.scout@wetboiz.com">dr.scout@wetboiz.com</a>.
     To stop receiving the digest, use the Unsubscribe button at the bottom of any email.
