@@ -17,8 +17,7 @@
   nav { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; flex-wrap: wrap;
         font: 0.9rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
   nav .spacer { flex: 1; }
-  nav select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line);
-               border-radius: 6px; padding: 4px 6px; max-width: 100%; }
+
   nav a { color: var(--muted); text-decoration: none; }
   nav a:hover { color: var(--accent); }
   h1 { font-size: 2.1rem; margin: 0 0 4px; letter-spacing: -0.01em; }
@@ -45,26 +44,7 @@
 </head>
 <body data-date="2026-11-10">
 <main>
-  <nav><label><select id="past" aria-label="Show the digest from another day">
-    <option value="">Past digests…</option></select></label>
-  <script>
-  (function () {
-    var sel = document.getElementById("past"), here = document.body.dataset.date || "";
-    fetch("/archive/dates.json", {cache: "no-cache"}).then(function (r) { return r.json(); }).then(function (dates) {
-      dates.forEach(function (d) {
-        var o = document.createElement("option");
-        o.value = d;
-        o.textContent = new Date(d + "T12:00:00").toLocaleDateString(undefined,
-          {weekday: "short", year: "numeric", month: "short", day: "numeric"});
-        if (d === here) o.selected = true;
-        sel.appendChild(o);
-      });
-    }).catch(function () {});
-    sel.addEventListener("change", function () {
-      if (sel.value) location.href = "/archive/" + sel.value + ".html";
-    });
-  })();
-  </script><span class="spacer"></span><a href="/">Latest</a><a href="/about/">About</a></nav>
+  <nav><div id="cal" class="cal"></div><script src="/assets/calendar.js" defer></script><span class="spacer"></span><a href="/">Latest</a><a href="/about/">About</a></nav>
   <h1>wetboiz Daily Digest</h1>
   <p class="lede">A daily digest of new arXiv papers in quantum gravity and nearby fields.</p>
   <p class="meta">Tuesday, November 10, 2026 &middot; New submissions: hep-th 43 · gr-qc 40 · hep-ph 59 · astro-ph.CO 15 · 16 picked</p>
