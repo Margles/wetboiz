@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wetboiz Daily Digest · Monday, November 9, 2026</title>
+<meta name="description" content="A daily digest of new arXiv papers in quantum gravity and nearby fields.">
+<style>
+  :root { --bg: #fbfaf7; --fg: #1d1d1b; --muted: #66645e; --line: #e2dfd6; --accent: #1a4fa0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16171a; --fg: #e6e4de; --muted: #9b988f; --line: #2c2d31; --accent: #8cb4f5; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 17px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 72px; }
+  nav { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; flex-wrap: wrap;
+        font: 0.9rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  nav .spacer { flex: 1; }
+  nav select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line);
+               border-radius: 6px; padding: 4px 6px; max-width: 100%; }
+  nav a { color: var(--muted); text-decoration: none; }
+  nav a:hover { color: var(--accent); }
+  h1 { font-size: 2.1rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); margin: 0 0 32px; font-size: 1.05rem; }
+  h2 { font: 600 0.8rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; text-transform: uppercase;
+       letter-spacing: 0.08em; color: var(--muted); margin: 44px 0 12px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin: 0 0 6px; }
+  .note { color: var(--muted); font-size: 0.95rem; }
+  a { color: var(--accent); }
+  .meta { font: 0.85rem/1.4 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color: var(--muted);
+          margin: 0 0 28px; }
+  .paper { margin: 0 0 26px; }
+  .paper .title { font-weight: 600; text-decoration: none; }
+  .paper .title:hover { text-decoration: underline; }
+  .paper .num { color: var(--muted); }
+  .paper .authors, .paper .scores { font: 0.85rem/1.45 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+                                    color: var(--muted); }
+  .paper .summary { margin: 4px 0 2px; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted);
+           font-size: 0.95rem; }
+</style>
+</head>
+<body data-date="2026-11-09">
+<main>
+  <nav><label><select id="past" aria-label="Show the digest from another day">
+    <option value="">Past digests…</option></select></label>
+  <script>
+  (function () {
+    var sel = document.getElementById("past"), here = document.body.dataset.date || "";
+    fetch("/archive/dates.json", {cache: "no-cache"}).then(function (r) { return r.json(); }).then(function (dates) {
+      dates.forEach(function (d) {
+        var o = document.createElement("option");
+        o.value = d;
+        o.textContent = new Date(d + "T12:00:00").toLocaleDateString(undefined,
+          {weekday: "short", year: "numeric", month: "short", day: "numeric"});
+        if (d === here) o.selected = true;
+        sel.appendChild(o);
+      });
+    }).catch(function () {});
+    sel.addEventListener("change", function () {
+      if (sel.value) location.href = "/archive/" + sel.value + ".html";
+    });
+  })();
+  </script><span class="spacer"></span><a href="/">Latest</a><a href="/about/">About</a></nav>
+  <h1>wetboiz Daily Digest</h1>
+  <p class="lede">A daily digest of new arXiv papers in quantum gravity and nearby fields.</p>
+  <p class="meta">Monday, November 9, 2026 &middot; New submissions: hep-th 31 · gr-qc 15 · hep-ph 23 · astro-ph.CO 12 · 9 picked</p>
+  <div class="paper">
+    <div><span class="num">1.</span> <a class="title" href="https://arxiv.org/abs/2611.09804">5d $\mathbb{Z}_2$ S-folds and Seiberg--Witten curves</a></div>
+    <div class="authors">Sung-Soo Kim, Song Liu, Mudassar Sabir, Futoshi Yagi &middot; 2611.09804 [hep-th]</div>
+    <div class="summary">The paper computes Seiberg-Witten curves for Z2 S-folds of 5d rank-1 SCFTs in two ways: by identifying points on the parent curve, and by tuning masses to insert D4 7-branes. The two curves agree in Weierstrass normal form for all four examples.</div>
+    <div class="scores">relevance 9 &middot; quality 7 &middot; 5d SCFT Seiberg-Witten curves, S-folds, 7-branes.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">2.</span> <a class="title" href="https://arxiv.org/abs/2611.09631">Dynamical gluon mass generation, the Schwinger mechanism, spontaneous symmetry breaking, and color confinement in the linear covariant gauges of QCD</a></div>
+    <div class="authors">Giorgio Comitini &middot; 2611.09631 [hep-th, hep-ph]</div>
+    <div class="summary">Re-examines the Kugo-Ojima confinement criterion in linear covariant gauges and argues that its Goldstone equation was never correctly normalized. Argues the BRST quartet structure contains the Schwinger mechanism for gluon mass generation, realized as a Higgs-type breaking of the global gauge charge, compatible with unbroken color symmetry and confinement.</div>
+    <div class="scores">relevance 8 &middot; quality 6 &middot; Kugo-Ojima BRST quartet mechanism, unitarity of covariant gauges, confinement.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">3.</span> <a class="title" href="https://arxiv.org/abs/2611.08841">Type IIB Forms and Scalars from an $\mathrm{SL}(2,\mathbb{R})$ Topological Field Theory with Boundary</a></div>
+    <div class="authors">Euihun Joung, J. A. Rosabal &middot; 2611.08841 [hep-th]</div>
+    <div class="summary">The authors build an eleven-dimensional SL(2,R) topological field theory with boundary whose edge modes are the type IIB axion-dilaton and form fields. The boundary equations give the IIB duality relations including F5 self-duality, and S-duality monodromies appear as holonomies of a flat connection.</div>
+    <div class="scores">relevance 6 &middot; quality 8 &middot; IIB axion-dilaton SL(2,R) formulation with S-duality monodromies as holonomies.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">4.</span> <a class="title" href="https://arxiv.org/abs/2611.08952">Equatorial Periodic Orbits and Gravitational Wave Signatures in Weyl Geometric Gravity Black Holes</a></div>
+    <div class="authors">Dhruba Jyoti Gogoi, Himanshu Chaudhary, Tiberiu Harko &middot; 2611.08952 [gr-qc, hep-th]</div>
+    <div class="summary">Studies timelike geodesics, periodic orbits and numerical-kludge EMRI waveforms around a Weyl geometric gravity black hole. Finds that the nonmetricity parameters shift orbital lobes and waveform phases.</div>
+    <div class="scores">relevance 8 &middot; quality 5 &middot; Weyl geometric gravity black holes with nonmetricity; modified gravity solutions.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">5.</span> <a class="title" href="https://arxiv.org/abs/2611.08584">Fermionic Kaluza-Klein Reductions</a></div>
+    <div class="authors">Francesco Bertucci &middot; 2611.08584 [hep-th, gr-qc]</div>
+    <div class="summary">Derives the Kaluza-Klein reduction of free massless spin-1/2 and spin-3/2 fields on a product spacetime M x N at the level of the action. The result is towers of massive fields with masses set by Dirac and Rarita-Schwinger eigenvalues on N, and the paper discusses the fate of gauge invariance.</div>
+    <div class="scores">relevance 6 &middot; quality 7 &middot; Kaluza-Klein reductions of spin-1/2 and 3/2 fields on product spaces.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">6.</span> <a class="title" href="https://arxiv.org/abs/2611.08587">AdS to dS Flows Dual to Pseudo-Hermitian Theories</a></div>
+    <div class="authors">José M. Begines, Antón F. Faedo, Carlos Hoyos, Daniele Musso &middot; 2611.08587 [hep-th]</div>
+    <div class="summary">Constructs black-brane solutions of Einstein gravity coupled to a ghost scalar that interpolate between asymptotically AdS and dS regions across a horizon. They are interpreted as duals of pseudo-Hermitian theories, with one family from a supergravity truncation uplifted to eleven dimensions, and the paper studies thermodynamic and linear stability.</div>
+    <div class="scores">relevance 6 &middot; quality 7 &middot; Gravity with ghost scalar dual to pseudo-Hermitian theories; holography.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">7.</span> <a class="title" href="https://arxiv.org/abs/2611.08581">Discreetly Conformal: Higher-Order Chiral Scalars and the Discrete Series</a></div>
+    <div class="authors">Calvin Y. -R. Chen, Kurt Hinterbichler, Samanta Saha, Thomas Yan &middot; 2611.08581 [hep-th]</div>
+    <div class="summary">The paper shows that a 2d massless scalar with higher shift symmetries gauged decomposes into pairs of higher-order chiral scalars, which realize a hidden conformal symmetry. It extends this to de Sitter, explaining the conformal symmetry of discrete series scalars.</div>
+    <div class="scores">relevance 2 &middot; quality 8 &middot; Higher-order chiral scalars and dS discrete series; not listed topics.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">8.</span> <a class="title" href="https://arxiv.org/abs/2611.09893">Challenges for minimal warm inflation in the Standard Model and beyond</a></div>
+    <div class="authors">Anish Ghoshal, Alessandro Strumia &middot; 2611.09893 [hep-ph, astro-ph.CO]</div>
+    <div class="summary">The paper argues that minimal warm inflation with a phi G Gtilde coupling to QCD needs temperatures near the effective-operator cutoff, T/f of about 50-90, and a chemical potential far beyond the range where linear-response friction was tested. A UV completion needs an anomaly coefficient of about 100 or more, giving a sub-Planckian QCD Landau pole, and a more strongly coupled dark gauge sector relaxes these tensions.</div>
+    <div class="scores">relevance 2 &middot; quality 8 &middot; Warm inflation in the Standard Model; no listed topic, only loosely inflationary.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">9.</span> <a class="title" href="https://arxiv.org/abs/2611.09483">Thermal Field Theory for General Equilibrium Density Matrices</a></div>
+    <div class="authors">Alberto Salvio &middot; 2611.09483 [hep-ph, hep-th]</div>
+    <div class="summary">Reviews thermal field theory for general equilibrium density matrices including rotation and chemical potentials, with path-integral derivations of partition functions and thermal propagators for scalars, fermions and gauge fields.</div>
+    <div class="scores">relevance 2 &middot; quality 7 &middot; Thermal field theory review; no listed topic.</div>
+  </div>
+  <footer>
+    Questions or suggestions: <a href="mailto:dr.scout@wetboiz.com">dr.scout@wetboiz.com</a>.
+    To stop receiving the digest, use the Unsubscribe button at the bottom of any email.
+  </footer>
+</main>
+</body>
+</html>

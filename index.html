@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>wetboiz Daily Digest</title>
+<title>wetboiz Daily Digest · Wednesday, November 11, 2026</title>
 <meta name="description" content="A daily digest of new arXiv papers in quantum gravity and nearby fields.">
 <style>
   :root { --bg: #fbfaf7; --fg: #1d1d1b; --muted: #66645e; --line: #e2dfd6; --accent: #1a4fa0; }
@@ -14,8 +14,11 @@
   body { margin: 0; background: var(--bg); color: var(--fg);
          font: 17px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif; }
   main { max-width: 720px; margin: 0 auto; padding: 40px 16px 72px; }
-  nav { display: flex; justify-content: flex-end; gap: 18px; margin-bottom: 24px;
+  nav { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; flex-wrap: wrap;
         font: 0.9rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  nav .spacer { flex: 1; }
+  nav select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line);
+               border-radius: 6px; padding: 4px 6px; max-width: 100%; }
   nav a { color: var(--muted); text-decoration: none; }
   nav a:hover { color: var(--accent); }
   h1 { font-size: 2.1rem; margin: 0 0 4px; letter-spacing: -0.01em; }
@@ -40,12 +43,79 @@
            font-size: 0.95rem; }
 </style>
 </head>
-<body>
+<body data-date="2026-11-11">
 <main>
-  <nav><a href="/about/">About</a></nav>
+  <nav><label><select id="past" aria-label="Show the digest from another day">
+    <option value="">Past digests…</option></select></label>
+  <script>
+  (function () {
+    var sel = document.getElementById("past"), here = document.body.dataset.date || "";
+    fetch("/archive/dates.json", {cache: "no-cache"}).then(function (r) { return r.json(); }).then(function (dates) {
+      dates.forEach(function (d) {
+        var o = document.createElement("option");
+        o.value = d;
+        o.textContent = new Date(d + "T12:00:00").toLocaleDateString(undefined,
+          {weekday: "short", year: "numeric", month: "short", day: "numeric"});
+        if (d === here) o.selected = true;
+        sel.appendChild(o);
+      });
+    }).catch(function () {});
+    sel.addEventListener("change", function () {
+      if (sel.value) location.href = "/archive/" + sel.value + ".html";
+    });
+  })();
+  </script><span class="spacer"></span><a href="/">Latest</a><a href="/about/">About</a></nav>
   <h1>wetboiz Daily Digest</h1>
   <p class="lede">A daily digest of new arXiv papers in quantum gravity and nearby fields.</p>
-  <p class="meta">The next digest will appear here after the next arXiv announcement.</p>
+  <p class="meta">Wednesday, November 11, 2026 &middot; New submissions: hep-th 28 · gr-qc 22 · hep-ph 27 · astro-ph.CO 12 · 8 picked</p>
+  <div class="paper">
+    <div><span class="num">1.</span> <a class="title" href="https://arxiv.org/abs/2611.13112">Resummations In Higher-Curvature Modifications Of Starobinsky Inflation</a></div>
+    <div class="authors">Marco Piva &middot; 2611.13112 [hep-th, gr-qc]</div>
+    <div class="summary">Shows that the singular dependence of Starobinsky-inflation observables on higher-curvature couplings can be resummed in the ratio gamma/alpha, giving an improved slow-roll expansion that reduces smoothly to Starobinsky as gamma goes to 0. Computes next-to-leading-order observables for an R^3 term, finds that they differ from first-order results only outside the data-favored n_s range, and comments on stability in renormalizable (fakeon) quantum gravity.</div>
+    <div class="scores">relevance 9 &middot; quality 7 &middot; Higher-curvature corrections to Starobinsky inflation, power spectra and r.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">2.</span> <a class="title" href="https://arxiv.org/abs/2611.13092">Moduli spaces in CFT: vortex defects</a></div>
+    <div class="authors">Gabriel Cuomo, Adar Sharon &middot; 2611.13092 [hep-th]</div>
+    <div class="summary">The paper constructs codimension-two conformal vortex defects in CFTs with moduli spaces and a broken continuous symmetry, as saddle points of the moduli-space EFT, generalizing Gukov-Witten and ABJM vortex loops without supersymmetry. It reproduces localization results for Gukov-Witten operators, computes the g-function for 1/2-BPS vortex loops in ABJM, and relates defect spectra to massive particles in the broken vacuum.</div>
+    <div class="scores">relevance 5 &middot; quality 8 &middot; Codimension-two conformal vortex defects with broken conformal symmetry.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">3.</span> <a class="title" href="https://arxiv.org/abs/2611.14370">The Higgs boson, naturalness, and the Universe</a></div>
+    <div class="authors">Mikhail Shaposhnikov &middot; 2611.14370 [hep-ph, hep-th]</div>
+    <div class="summary">Review of the Higgs boson&#x27;s role in particle physics and cosmology within the SM and the nuMSM. It covers vacuum metastability, naturalness, Higgs inflation, reheating, the electroweak phase transition and baryogenesis.</div>
+    <div class="scores">relevance 5 &middot; quality 8 &middot; Review covering the Higgs naturalness/hierarchy problem and Higgs inflation.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">4.</span> <a class="title" href="https://arxiv.org/abs/2611.14086">Cosmic String Networks with Time-Varying Tension: Field-Theory Simulations and an Analytic Model</a></div>
+    <div class="authors">José Correia, Ivan Rybak &middot; 2611.14086 [astro-ph.CO, hep-ph]</div>
+    <div class="summary">The authors run the first field-theory simulations of Abelian-Higgs cosmic string networks with tension varying as a power of the scale factor. Networks reach the expected scaling regime except when field oscillations redshift more slowly than the potential, and the results agree with a calibrated velocity-dependent one-scale model.</div>
+    <div class="scores">relevance 6 &middot; quality 8 &middot; Cosmic string network simulations; topological defects, GW-relevant but no GW computation.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">5.</span> <a class="title" href="https://arxiv.org/abs/2611.14212">Stellar Scalar Monopoles from Gauss--Bonnet Curvature beyond Four Dimensions</a></div>
+    <div class="authors">Sudan Hansraj &middot; 2611.14212 [gr-qc]</div>
+    <div class="summary">For static stars above four dimensions in scalar-Gauss-Bonnet gravity at first order in the coupling, the scalar charge is an interior integral weighted by energy density plus radial pressure, so it is nonzero and has the sign of the coupling, opposite to a Schwarzschild-Tangherlini black hole. The four-dimensional absence of stellar charge follows because the spatial Gauss-Bonnet density vanishes in three dimensions.</div>
+    <div class="scores">relevance 6 &middot; quality 7 &middot; Scalar-Gauss-Bonnet stellar scalar charge in higher dimensions.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">6.</span> <a class="title" href="https://arxiv.org/abs/2611.13074">Four-charge Rotating AdS Black Holes in Gauged STU Supergravity</a></div>
+    <div class="authors">Liang Ma, H. Lu &middot; 2611.13074 [hep-th, gr-qc]</div>
+    <div class="summary">Constructs the general non-extremal rotating AdS4 black hole with four independent charges in gauged STU supergravity and derives its thermodynamics. The BPS limit reproduces the known entropy matching the dual CFT, and the solution is shown to be free of closed timelike curves outside the horizon.</div>
+    <div class="scores">relevance 3 &middot; quality 8 &middot; Exact rotating AdS black holes in gauged supergravity; no listed topic.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">7.</span> <a class="title" href="https://arxiv.org/abs/2611.14344">Dynamical obstructions to primary Proca hair and its logarithmic Maxwell continuation</a></div>
+    <div class="authors">Anirudh Pradhan, K. Ghaderi, Ulug&#x27;bek Eshkarayev, Sardor Sabirov, Javlon Rayimbaev &middot; 2611.14344 [gr-qc]</div>
+    <div class="summary">The paper studies a regularized generalized Proca theory with Gauss-Bonnet gravity and shows the constant-norm hairy black holes cannot have both a positive dipole kinetic term and real radial tensor characteristics. Adding a Maxwell term gives a logarithmic-norm branch with regular horizons and finite mass, but a longitudinal even angular mode with negative squared speed remains.</div>
+    <div class="scores">relevance 7 &middot; quality 5 &middot; Vector-Gauss-Bonnet hair, Hamiltonian analysis, ghost-like angular instability.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">8.</span> <a class="title" href="https://arxiv.org/abs/2611.14206">Yang-Lee edge singularity at $\mathcal{O}(\partial^4)$ from the functional renormalization group: revised analysis</a></div>
+    <div class="authors">Konrad Kockler, Jan M. Pawlowski, Vladimir V. Skokov &middot; 2611.14206 [hep-th]</div>
+    <div class="summary">Determines Yang-Lee edge singularity exponents as functions of dimension using the functional renormalization group to fourth order in the derivative expansion, matching epsilon-expansion and exact 2d values. Attributes earlier hyperscaling violations to ignoring the motion of the expansion point.</div>
+    <div class="scores">relevance 1 &middot; quality 8 &middot; Yang-Lee functional RG; not gravity.</div>
+  </div>
   <footer>
     Questions or suggestions: <a href="mailto:dr.scout@wetboiz.com">dr.scout@wetboiz.com</a>.
     To stop receiving the digest, use the Unsubscribe button at the bottom of any email.

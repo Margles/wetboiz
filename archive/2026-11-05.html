@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wetboiz Daily Digest · Thursday, November 5, 2026</title>
+<meta name="description" content="A daily digest of new arXiv papers in quantum gravity and nearby fields.">
+<style>
+  :root { --bg: #fbfaf7; --fg: #1d1d1b; --muted: #66645e; --line: #e2dfd6; --accent: #1a4fa0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16171a; --fg: #e6e4de; --muted: #9b988f; --line: #2c2d31; --accent: #8cb4f5; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 17px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 72px; }
+  nav { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; flex-wrap: wrap;
+        font: 0.9rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  nav .spacer { flex: 1; }
+  nav select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line);
+               border-radius: 6px; padding: 4px 6px; max-width: 100%; }
+  nav a { color: var(--muted); text-decoration: none; }
+  nav a:hover { color: var(--accent); }
+  h1 { font-size: 2.1rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); margin: 0 0 32px; font-size: 1.05rem; }
+  h2 { font: 600 0.8rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; text-transform: uppercase;
+       letter-spacing: 0.08em; color: var(--muted); margin: 44px 0 12px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin: 0 0 6px; }
+  .note { color: var(--muted); font-size: 0.95rem; }
+  a { color: var(--accent); }
+  .meta { font: 0.85rem/1.4 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color: var(--muted);
+          margin: 0 0 28px; }
+  .paper { margin: 0 0 26px; }
+  .paper .title { font-weight: 600; text-decoration: none; }
+  .paper .title:hover { text-decoration: underline; }
+  .paper .num { color: var(--muted); }
+  .paper .authors, .paper .scores { font: 0.85rem/1.45 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+                                    color: var(--muted); }
+  .paper .summary { margin: 4px 0 2px; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted);
+           font-size: 0.95rem; }
+</style>
+</head>
+<body data-date="2026-11-05">
+<main>
+  <nav><label><select id="past" aria-label="Show the digest from another day">
+    <option value="">Past digests…</option></select></label>
+  <script>
+  (function () {
+    var sel = document.getElementById("past"), here = document.body.dataset.date || "";
+    fetch("/archive/dates.json", {cache: "no-cache"}).then(function (r) { return r.json(); }).then(function (dates) {
+      dates.forEach(function (d) {
+        var o = document.createElement("option");
+        o.value = d;
+        o.textContent = new Date(d + "T12:00:00").toLocaleDateString(undefined,
+          {weekday: "short", year: "numeric", month: "short", day: "numeric"});
+        if (d === here) o.selected = true;
+        sel.appendChild(o);
+      });
+    }).catch(function () {});
+    sel.addEventListener("change", function () {
+      if (sel.value) location.href = "/archive/" + sel.value + ".html";
+    });
+  })();
+  </script><span class="spacer"></span><a href="/">Latest</a><a href="/about/">About</a></nav>
+  <h1>wetboiz Daily Digest</h1>
+  <p class="lede">A daily digest of new arXiv papers in quantum gravity and nearby fields.</p>
+  <p class="meta">Thursday, November 5, 2026 &middot; New submissions: hep-th 21 · gr-qc 22 · hep-ph 27 · astro-ph.CO 12 · 14 picked</p>
+  <div class="paper">
+    <div><span class="num">1.</span> <a class="title" href="https://arxiv.org/abs/2611.06794">5-brane webs and generalised symmetries</a></div>
+    <div class="authors">Mohammad Akhond, Federico Carta, Sung-Soo Kim, Futoshi Yagi &middot; 2611.06794 [hep-th]</div>
+    <div class="summary">The paper gives a microscopic prescription for reading 1-form symmetries off 5-brane webs, using D3-branes and (p,q) strings as Wilson lines whose screening goes through string junctions, Higgsing and Hanany-Witten transitions. It reproduces the Smith normal form for webs without orientifolds, proposes an effective charge rule for O7+ planes, and finds that for O5-planes the symmetry also depends on the local brane structure near the orientifold.</div>
+    <div class="scores">relevance 10 &middot; quality 8 &middot; 5-brane webs, 7-branes, orientifolds and 1-form symmetries; core 5D.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">2.</span> <a class="title" href="https://arxiv.org/abs/2611.05787">Partially Massless Condensates and Reentrant NUT/Bolt Phase Transitions in Conformal Gravity</a></div>
+    <div class="authors">Cristóbal Corral, Felipe Diaz, Borja Diez, Eleftherios Papantonopoulos, Per Sundell &middot; 2611.05787 [hep-th]</div>
+    <div class="summary">Studies Taub-NUT/Bolt instantons in conformal gravity with weakened AdS boundary conditions and finds a Bolt branch with a partially massless response at zero source. The thermodynamics shows reentrant NUT/Bolt transitions and possible negative thermodynamic volume.</div>
+    <div class="scores">relevance 9 &middot; quality 7 &middot; Bach-flat conformal gravity NUT/Bolt instantons; directly matches a wanted paper.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">3.</span> <a class="title" href="https://arxiv.org/abs/2611.06750">Inflationary attractors in metric-affine gravity</a></div>
+    <div class="authors">Ilaria Andrei, Christian Dioguardi &middot; 2611.06750 [gr-qc, astro-ph.CO, hep-ph]</div>
+    <div class="summary">Studies slow-roll inflation in metric-affine gravity with non-dynamical torsion and non-metricity. At strong coupling it finds an alpha-attractor with n_s = 1 - 2/N and r = 12 alpha/N^2, where alpha = 1 + zeta/(6 xi), recovering Starobinsky and Palatini inflation as limits, and shows the structure persists without projective invariance.</div>
+    <div class="scores">relevance 9 &middot; quality 7 &middot; Inflationary attractors in metric-affine gravity; Starobinsky and Palatini limits, directly matching a wanted paper.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">4.</span> <a class="title" href="https://arxiv.org/abs/2611.06875">Axial black hole perturbations in purely-metric Horndeski theories</a></div>
+    <div class="authors">Héloïse Delaporte, Hugo Roussille &middot; 2611.06875 [gr-qc]</div>
+    <div class="summary">The paper studies axial perturbations of curvaturised black holes in purely-metric Horndeski theories. It finds they propagate on an effective metric with the same causal structure as the background, are linearly stable, and computes the l=2 fundamental quasi-normal mode and first five overtones.</div>
+    <div class="scores">relevance 7 &middot; quality 8 &middot; Black hole perturbations in Horndeski theories; hairy black holes and stability.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">5.</span> <a class="title" href="https://arxiv.org/abs/2611.05560">An obstruction to cosmic acceleration from shift-symmetric dark sector interactions</a></div>
+    <div class="authors">Jose Beltrán Jiménez, Luis J. Garay, Erik Jensko, María Pérez Garrote &middot; 2611.05560 [astro-ph.CO, gr-qc, hep-th]</div>
+    <div class="summary">Using the effective field theory of a perfect fluid coupled to a superfluid, the paper derives ghost and gradient stability conditions for scalar perturbations. It concludes that slow-roll expansion is incompatible with stability, and that a stable phantom-divide crossing can only go from non-phantom to phantom, the opposite of the direction favoured by DESI.</div>
+    <div class="scores">relevance 6 &middot; quality 7 &middot; Obstruction to cosmic acceleration from dark sector interactions; reader wanted this paper.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">6.</span> <a class="title" href="https://arxiv.org/abs/2611.06507">Higher Integrability, Generalized Symmetries, and Partially Topological Field Theories</a></div>
+    <div class="authors">Luigi Alfonsi, Leron Borsten, Mehran Jalali Farahani, Hyungrok Kim, Martin Wolf, Charles A. S. Young &middot; 2611.06507 [hep-th, math-ph]</div>
+    <div class="summary">The paper shows that in a non-Lorentzian higher semi-holomorphic Chern-Simons theory on M x CP^1, the equations of motion give a flat spectral-parameter-dependent higher Lax connection. Its Laurent coefficients give conserved quantities and classical line defects that realise a (d_M-2)-form symmetry, tested on gauge-invariant probes.</div>
+    <div class="scores">relevance 7 &middot; quality 7 &middot; Generalized symmetries with higher integrability; title wanted previously.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">7.</span> <a class="title" href="https://arxiv.org/abs/2611.05504">Gravitational waves flooding the Universe after wall domination</a></div>
+    <div class="authors">Sabir Ramazanov, Zhen-Min Zeng &middot; 2611.05504 [astro-ph.CO, hep-ph, hep-th]</div>
+    <div class="summary">The paper studies an early-universe epoch of domain wall domination followed by wall annihilation into radiation. It estimates the resulting gravitational wave spectrum, which has a distinctive plateau and can raise N_eff above BBN limits unless the wall-dominated stage lasts fewer than about 10 e-folds.</div>
+    <div class="scores">relevance 7 &middot; quality 7 &middot; Gravitational waves from domain walls with tensor modes frozen outside the horizon; reader wanted this paper.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">8.</span> <a class="title" href="https://arxiv.org/abs/2611.06842">Anomaly effective actions for 4d $\mathcal{N}=1$ superconformal field theories</a></div>
+    <div class="authors">Pantelis Panopoulos, Ioannis Papadimitriou &middot; 2611.06842 [hep-th]</div>
+    <div class="summary">The paper constructs the Wess-Zumino anomaly effective action of 4d N=1 SCFTs in components via the coset construction, determining the superconformal anomalies of conformal supergravity in a two-parameter family of schemes. It finds a local counterterm that yields a generalized WZ action reproducing all anomalies and gives the component form of the superspace WZ action of old-minimal supergravity.</div>
+    <div class="scores">relevance 6 &middot; quality 8 &middot; Weyl anomaly effective actions in conformal supergravity; reader wanted this paper.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">9.</span> <a class="title" href="https://arxiv.org/abs/2611.05526">Quantum error correcting codes from quiver moduli: Grassmannians, cyclic monodromy, and argyle collision divisors</a></div>
+    <div class="authors">Steven Rayan, Evan Sundbo &middot; 2611.05526 [quant-ph, hep-th, math.AG, math.CO, math.RT] (cross-list)</div>
+    <div class="summary">Builds exact quantum error correcting codes from cyclic and argyle quiver moduli on the projective line, and proves the largest Kostka multiplicity is the optimal logical dimension for monodromy noise. Gives explicit codewords for a six-sheet qubit and examples of errors outside the noise model.</div>
+    <div class="scores">relevance 6 &middot; quality 6 &middot; Quantum error correcting codes from quiver moduli; reader wanted this paper.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">10.</span> <a class="title" href="https://arxiv.org/abs/2611.06659">Born-Infeld black holes in bumblebee gravity</a></div>
+    <div class="authors">A. A. Araújo Filho, E. M. Siquieri, N. Heidari, V. B. Bezerra, A. F. Santos &middot; 2611.06659 [gr-qc]</div>
+    <div class="summary">The paper constructs exact static spherical charged black hole solutions in bumblebee gravity coupled to Born-Infeld electrodynamics and studies horizons, geodesics, photon spheres, and shadows. It derives conditional bounds on the charge and nonlinear scale from Sgr A*, M87*, and planetary perihelion data.</div>
+    <div class="scores">relevance 8 &middot; quality 5 &middot; Black hole solutions in bumblebee Lorentz-violating gravity; closely matches a wanted paper.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">11.</span> <a class="title" href="https://arxiv.org/abs/2611.06246">Missing solutions in scalar-Gauss-Bonnet gravity</a></div>
+    <div class="authors">Oğuzhan K. Yamak, Kalin V. Staykov, Fethi M. Ramazanoğlu, Daniela D. Doneva, Stoytcho S. Yazadjiev &middot; 2611.06246 [gr-qc]</div>
+    <div class="summary">Shows that scalarized neutron-star branches in scalar-Gauss-Bonnet gravity that appear to terminate can reappear after a gap, and finds these previously missed solutions numerically. It identifies a new non-central regularity condition, the vanishing of the determinant of the radial evolution system, that explains missing solutions the known central condition cannot.</div>
+    <div class="scores">relevance 6 &middot; quality 7 &middot; Missing solutions in scalar-Gauss-Bonnet gravity; same title was wanted.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">12.</span> <a class="title" href="https://arxiv.org/abs/2611.05789">Gluon and Faddeev--Popov ghost propagators in rotating background: An eigenfunction approach</a></div>
+    <div class="authors">Benjamín García-Contreras, Luis A. Hernández, R. Zamora &middot; 2611.05789 [hep-th, hep-ph]</div>
+    <div class="summary">Constructs the free gluon and Faddeev-Popov ghost propagators in Feynman gauge in rigidly rotating cylindrical coordinates via an eigenfunction expansion, recovering the Minkowski propagator without boundaries. It then extends the construction to a finite-radius cylinder with relative boundary conditions for gluons and Dirichlet for ghosts.</div>
+    <div class="scores">relevance 6 &middot; quality 6 &middot; Faddeev-Popov ghost propagators; wanted similar paper, gauge-fixing topic.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">13.</span> <a class="title" href="https://arxiv.org/abs/2611.06902">Gravitational-Wave Constraints on $R^2$ Gravity</a></div>
+    <div class="authors">Pawan Kumar Gupta, Laura Sagunski &middot; 2611.06902 [gr-qc, astro-ph.HE, hep-th]</div>
+    <div class="summary">The paper maps quadratic f(R) gravity onto a massive scalar-tensor EFT inspiral waveform and fits GW170817 and GW190425. It finds a 90% bound a &lt; 6.2e6 m^2, equivalent to a scalar mass above about 3e-11 eV.</div>
+    <div class="scores">relevance 6 &middot; quality 6 &middot; Gravitational-wave constraints on R^2 gravity; the reader previously wanted the same title.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">14.</span> <a class="title" href="https://arxiv.org/abs/2611.05676">Bumblebee radiation from neutral matter around a black hole</a></div>
+    <div class="authors">A. A. Araújo Filho &middot; 2611.05676 [gr-qc, hep-th]</div>
+    <div class="summary">Computes the vector (bumblebee) radiation sourced by a neutral point particle orbiting a black hole in the radial bumblebee vacuum, finding an axial dipole at the orbital frequency and a quadrupole at twice that for slightly eccentric orbits. It gives the dipole tidal strain and partial luminosity, scaling as e^2 v^12.</div>
+    <div class="scores">relevance 6 &middot; quality 5 &middot; Bumblebee gravity radiation around a black hole; Lorentz-violating gravity.</div>
+  </div>
+  <footer>
+    Questions or suggestions: <a href="mailto:dr.scout@wetboiz.com">dr.scout@wetboiz.com</a>.
+    To stop receiving the digest, use the Unsubscribe button at the bottom of any email.
+  </footer>
+</main>
+</body>
+</html>

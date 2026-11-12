@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wetboiz Daily Digest · Monday, November 2, 2026</title>
+<meta name="description" content="A daily digest of new arXiv papers in quantum gravity and nearby fields.">
+<style>
+  :root { --bg: #fbfaf7; --fg: #1d1d1b; --muted: #66645e; --line: #e2dfd6; --accent: #1a4fa0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16171a; --fg: #e6e4de; --muted: #9b988f; --line: #2c2d31; --accent: #8cb4f5; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 17px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 72px; }
+  nav { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; flex-wrap: wrap;
+        font: 0.9rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  nav .spacer { flex: 1; }
+  nav select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line);
+               border-radius: 6px; padding: 4px 6px; max-width: 100%; }
+  nav a { color: var(--muted); text-decoration: none; }
+  nav a:hover { color: var(--accent); }
+  h1 { font-size: 2.1rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); margin: 0 0 32px; font-size: 1.05rem; }
+  h2 { font: 600 0.8rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; text-transform: uppercase;
+       letter-spacing: 0.08em; color: var(--muted); margin: 44px 0 12px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin: 0 0 6px; }
+  .note { color: var(--muted); font-size: 0.95rem; }
+  a { color: var(--accent); }
+  .meta { font: 0.85rem/1.4 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color: var(--muted);
+          margin: 0 0 28px; }
+  .paper { margin: 0 0 26px; }
+  .paper .title { font-weight: 600; text-decoration: none; }
+  .paper .title:hover { text-decoration: underline; }
+  .paper .num { color: var(--muted); }
+  .paper .authors, .paper .scores { font: 0.85rem/1.45 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+                                    color: var(--muted); }
+  .paper .summary { margin: 4px 0 2px; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted);
+           font-size: 0.95rem; }
+</style>
+</head>
+<body data-date="2026-11-02">
+<main>
+  <nav><label><select id="past" aria-label="Show the digest from another day">
+    <option value="">Past digests…</option></select></label>
+  <script>
+  (function () {
+    var sel = document.getElementById("past"), here = document.body.dataset.date || "";
+    fetch("/archive/dates.json", {cache: "no-cache"}).then(function (r) { return r.json(); }).then(function (dates) {
+      dates.forEach(function (d) {
+        var o = document.createElement("option");
+        o.value = d;
+        o.textContent = new Date(d + "T12:00:00").toLocaleDateString(undefined,
+          {weekday: "short", year: "numeric", month: "short", day: "numeric"});
+        if (d === here) o.selected = true;
+        sel.appendChild(o);
+      });
+    }).catch(function () {});
+    sel.addEventListener("change", function () {
+      if (sel.value) location.href = "/archive/" + sel.value + ".html";
+    });
+  })();
+  </script><span class="spacer"></span><a href="/">Latest</a><a href="/about/">About</a></nav>
+  <h1>wetboiz Daily Digest</h1>
+  <p class="lede">A daily digest of new arXiv papers in quantum gravity and nearby fields.</p>
+  <p class="meta">Monday, November 2, 2026 &middot; New submissions: hep-th 24 · gr-qc 24 · hep-ph 23 · astro-ph.CO 14 · 15 picked</p>
+  <div class="paper">
+    <div><span class="num">1.</span> <a class="title" href="https://arxiv.org/abs/2610.40769">The running of Weyl gauged gravity: asymptotic freedom, its obstruction, and a way out</a></div>
+    <div class="authors">Diego Buccio, Fabrizio Chicconi, Luca Parente, Omar Zanusso &middot; 2610.40769 [hep-th, gr-qc]</div>
+    <div class="summary">The paper computes the one-loop beta functions of quadratic gravity in Weyl conformal geometry and finds the Weyl-tensor and Weyl gauge couplings asymptotically free, while the R-hat-squared sector blocks a UV fixed point in the physical region, including with Standard Model matter. Adding Weyl-invariant four-derivative scalars with large enough coupling can produce a UV-attractive physical fixed point.</div>
+    <div class="scores">relevance 10 &middot; quality 7 &middot; One-loop running of quadratic Weyl gauged gravity; asymptotic freedom; reader wanted this title.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">2.</span> <a class="title" href="https://arxiv.org/abs/2610.41636">New Effects in Multifield Cosmology Coupled to the Gauss-Bonnet Term</a></div>
+    <div class="authors">Lilia Anguelova, Sonia Paban &middot; 2610.41636 [hep-th, astro-ph.CO]</div>
+    <div class="summary">The paper extends two-field rapid-turn cosmology to include a scalar-coupled Gauss-Bonnet term, deriving modified relations between the Hubble and potential slow-roll parameters and a consistency condition on the field-space metric, potential, and coupling. It also finds that phantom-like dark energy behavior is possible in such models only when dark matter is non-negligible.</div>
+    <div class="scores">relevance 8 &middot; quality 7 &middot; Gauss-Bonnet coupled multifield inflation, swampland conditions; the wanted list has the same title.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">3.</span> <a class="title" href="https://arxiv.org/abs/2610.42020">Bootstrapping a Higher-Derivative Cosmological Collider: Borel-Laplace Resummation and Stokes Phenomena</a></div>
+    <div class="authors">Matheus C. Ferreira, Felipe T. Falciano &middot; 2610.42020 [hep-th, gr-qc, hep-ph]</div>
+    <div class="summary">The paper solves cosmological bootstrap equations for a massive spectator with quartic (ghost-condensate) dispersion, where the collapsed limit becomes an irregular singular point with Stokes phenomena. It fixes the vacuum through an asymptotic boundary condition, builds a Borel-Laplace particular solution, and derives modified squeezed-limit and near-equilateral bispectrum signals.</div>
+    <div class="scores">relevance 8 &middot; quality 7 &middot; Higher-derivative corrections to inflationary correlators; the same title is on the wanted list.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">4.</span> <a class="title" href="https://arxiv.org/abs/2610.40780">Separation of variables for massive spin-2 fields on the Kerr black hole</a></div>
+    <div class="authors">Oscar J. C. Dias, Jorge E. Santos &middot; 2610.40780 [gr-qc, hep-th]</div>
+    <div class="summary">The paper shows that the Fierz-Pauli massive spin-2 equations on Kerr separate via two commuting 5x5 angular operators, yielding a single second-order radial ODE for each joint eigenfunction. It uses this to compute superradiant and Gregory-Laflamme instability growth rates faster than coupled PDEs, mapping which mode dominates across spin and mass coupling.</div>
+    <div class="scores">relevance 7 &middot; quality 8 &middot; Massive spin-2 fields on Kerr; the same title is on the wanted list.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">5.</span> <a class="title" href="https://arxiv.org/abs/2610.40763">Quantum Cosmology at the Cusp</a></div>
+    <div class="authors">Luis A. Anchordoqui, Alek Bedroya, Muldrow Etheredge, Dieter Lüst, Severin Lüst, Alexander Westphal &middot; 2610.40763 [hep-th]</div>
+    <div class="summary">The paper studies axion-supported scaling cosmologies near cusps of moduli space and argues, using the Wheeler-DeWitt equation with quantized axion momentum, that compact universes are driven to these solutions when (d-2)alpha(alpha+2gamma) &gt; 4(d-1). It bounds the transition time and shows that the trans-Planckian censorship conjecture requires 2gamma &lt;= (d-2)alpha.</div>
+    <div class="scores">relevance 6 &middot; quality 7 &middot; Swampland-flavored moduli-space cusps, trans-Planckian censorship, axion cosmology; reader wanted this title.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">6.</span> <a class="title" href="https://arxiv.org/abs/2610.40773">Giant Gravitons in AdS$_5\times$SE$_5$ and the Superconformal Index of Toric Quiver Gauge Theories</a></div>
+    <div class="authors">Evan Deddo, Sabarenath Jayaprakash, James T. Liu, Leopoldo A. Pando Zayas &middot; 2610.40773 [hep-th]</div>
+    <div class="summary">The paper quantizes probe D3-brane fluctuations around maximal giant gravitons in AdS5 x T^{1,1} and AdS5 x Y^{p,q} and extracts their BPS spectra. The resulting single-letter indices, including the orbifold projections, match the giant-graviton expansion of the dual toric quiver gauge theories.</div>
+    <div class="scores">relevance 6 &middot; quality 7 &middot; Toric quiver gauge theories and D3 giant gravitons; reader wanted this title.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">7.</span> <a class="title" href="https://arxiv.org/abs/2610.40777">On Boundary State Screening via Solitons</a></div>
+    <div class="authors">Vivek Chakrabhavi, Babak Haghighat, Jonathan J. Heckman &middot; 2610.40777 [hep-th, math.AG, math.RT]</div>
+    <div class="summary">The paper defines a boundary state screening group as the cokernel of the soliton-induced map on the lattice of boundary states in massive QFTs. It relates this group to the target-space defect group, uses it to diagnose non-normalizable modes and stable interfaces or junctions, and illustrates it with Landau-Ginzburg and Wess-Zumino models.</div>
+    <div class="scores">relevance 6 &middot; quality 7 &middot; Boundary states via solitons, defect group; reader wanted this title.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">8.</span> <a class="title" href="https://arxiv.org/abs/2610.40775">On the Role of Gravity in Supercooled Phase Transitions</a></div>
+    <div class="authors">Filippo Cutrona, Alberto Salvio &middot; 2610.40775 [hep-ph, astro-ph.CO, gr-qc, hep-th]</div>
+    <div class="summary">The paper studies how spacetime curvature and non-minimal scalar-curvature couplings affect supercooled first-order phase transitions in radiative symmetry breaking models, in a model-independent way. It finds that positive non-minimal coupling enlarges the region where the transition completes, works out gravitational-wave predictions including a PTA interpretation, and estimates the number of e-folds in the false vacuum.</div>
+    <div class="scores">relevance 6 &middot; quality 7 &middot; Radiative symmetry breaking with non-minimal couplings; the same title is on the wanted list.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">9.</span> <a class="title" href="https://arxiv.org/abs/2609.31444">Teleparallel Renormalization of Gravitational Action</a></div>
+    <div class="authors">Martin Krššák, Michal Stano &middot; 2609.31444 [gr-qc, hep-th]</div>
+    <div class="summary">The paper examines teleparallel renormalization of the Euclidean and Wheeler-DeWitt-patch gravitational action for Schwarzschild, showing the bulk versus quasilocal discrepancy comes from the central singularity and that the proper diagonal and canonical frames agree on the Euclidean action. It also classifies residual local Lorentz freedom and argues that a torsion fall-off condition fixes the Euclidean action uniquely.</div>
+    <div class="scores">relevance 7 &middot; quality 7 &middot; Teleparallel gravity action renormalization; the same title is on the wanted list.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">10.</span> <a class="title" href="https://arxiv.org/abs/2610.40779">Monopole-Fermion Scattering from Twisted Conformal Boundary States</a></div>
+    <div class="authors">Clay Córdova, Diego García-Sepúlveda, Lian-Tao Wang, Yen-Chieh Wang &middot; 2610.40779 [hep-th, cond-mat.str-el, hep-ph, math.QA]</div>
+    <div class="summary">The paper constructs twisted-sector boundary states for N free Dirac fermions and uses them to compute monopole-fermion (Callan-Rubakov) scattering correlators. It finds a unit-modulus two-point function between the incoming fermion and the outgoing defect operator, and shows that this twisted channel supplies the missing s-wave contribution needed for four-dimensional unitarity.</div>
+    <div class="scores">relevance 6 &middot; quality 8 &middot; Monopole-fermion scattering with twisted boundary states; reader wanted this title.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">11.</span> <a class="title" href="https://arxiv.org/abs/2608.23878">Amplification of metric perturbations by extremal horizons</a></div>
+    <div class="authors">Samuel E. Gralla, Sepehr Salamat &middot; 2608.23878 [gr-qc, hep-th]</div>
+    <div class="summary">Shows that nearly co-rotating perturbations of extremal Kerr-Newman black holes are amplified near the horizon, because discrete self-similarity gives complex scaling weights -1/2 +/- i alpha for Q below about 0.93M. The same exponents give the Aretakis decay and growth rates, and the amplification can be read as a driven Aretakis instability.</div>
+    <div class="scores">relevance 6 &middot; quality 8 &middot; Extremal Kerr-Newman horizon perturbations; the same title is on the wanted list.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">12.</span> <a class="title" href="https://arxiv.org/abs/2610.40967">Separating Fermion and Gauge Resonances with Species-Dependent Lightcones in Warped Geometry</a></div>
+    <div class="authors">Lisa Randall, Marcos Riojas &middot; 2610.40967 [hep-ph]</div>
+    <div class="summary">The paper shows that species-dependent fifth-direction light speeds, generated by bulk scalar gradients, rescale fermion and gauge Kaluza-Klein towers independently while leaving zero-mode flavor structure unchanged. Two benchmark warped models give either 6.6-12 TeV right-handed quark partners with 30 TeV gluons, or a 5.5 TeV gluon below heavy fermion partners.</div>
+    <div class="scores">relevance 6 &middot; quality 6 &middot; Warped extra-dimension model with species-dependent lightcones; matches wanted similar title.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">13.</span> <a class="title" href="https://arxiv.org/abs/2610.42134">Baker--Akhiezer sections from Higgs bundles and Landau levels in hyperbolic band theory</a></div>
+    <div class="authors">Duong Dinh, Steven Rayan &middot; 2610.42134 [math-ph, cond-mat.mes-hall, hep-th, math.AG] (cross-list)</div>
+    <div class="summary">Identifies lowest-Landau-level states of hyperbolic genus-two crystals with Baker-Akhiezer sections of rank-two O(3)-twisted Higgs bundles, and their vortices with Baker-Akhiezer divisors. The jump in Landau level dimension at zero momentum is shown to occur where the Hitchin fiber meets the Hitchin section, with states labeled by limiting directions.</div>
+    <div class="scores">relevance 4 &middot; quality 7 &middot; Higgs bundles and hyperbolic band theory; similar to a wanted title though.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">14.</span> <a class="title" href="https://arxiv.org/abs/2610.42056">Tests of equivalence principle violation in doubly coupled dark energy</a></div>
+    <div class="authors">Yannick Kegel, Ziyang Zheng, Luca Amendola &middot; 2610.42056 [astro-ph.CO]</div>
+    <div class="summary">Generalizes coupled dark energy by adding a nonminimal coupling to gravity and derives an equivalence-principle-violation observable E_P measurable from multi-tracer galaxy surveys. Fisher forecasts show SKA2 could constrain the dark-matter coupling at about 22% relative 1 sigma, with weaker constraints when both couplings vary.</div>
+    <div class="scores">relevance 4 &middot; quality 7 &middot; Nonminimally coupled dark energy forecasts; similar to a wanted paper, but observational.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">15.</span> <a class="title" href="https://arxiv.org/abs/2610.39243">Schwinger--Keldysh worldline effective field theory for quantum black holes: dissipation, noise and decoherence</a></div>
+    <div class="authors">Hajime Kobayashi &middot; 2610.39243 [hep-th, gr-qc]</div>
+    <div class="summary">Builds a Schwinger-Keldysh worldline effective field theory for black holes with response and noise kernels, related by the fluctuation-dissipation relation in thermal states. Applies it to stochastic forces in a post-Newtonian binary and to DSW-type decoherence of a spatial superposition, reproducing the DSW scaling.</div>
+    <div class="scores">relevance 6 &middot; quality 6 &middot; Worldline EFT for quantum black holes, decoherence, DSW; touches quantum gravity tests.</div>
+  </div>
+  <footer>
+    Questions or suggestions: <a href="mailto:dr.scout@wetboiz.com">dr.scout@wetboiz.com</a>.
+    To stop receiving the digest, use the Unsubscribe button at the bottom of any email.
+  </footer>
+</main>
+</body>
+</html>

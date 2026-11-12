@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wetboiz Daily Digest · Wednesday, November 4, 2026</title>
+<meta name="description" content="A daily digest of new arXiv papers in quantum gravity and nearby fields.">
+<style>
+  :root { --bg: #fbfaf7; --fg: #1d1d1b; --muted: #66645e; --line: #e2dfd6; --accent: #1a4fa0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16171a; --fg: #e6e4de; --muted: #9b988f; --line: #2c2d31; --accent: #8cb4f5; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 17px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 72px; }
+  nav { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; flex-wrap: wrap;
+        font: 0.9rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  nav .spacer { flex: 1; }
+  nav select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line);
+               border-radius: 6px; padding: 4px 6px; max-width: 100%; }
+  nav a { color: var(--muted); text-decoration: none; }
+  nav a:hover { color: var(--accent); }
+  h1 { font-size: 2.1rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); margin: 0 0 32px; font-size: 1.05rem; }
+  h2 { font: 600 0.8rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; text-transform: uppercase;
+       letter-spacing: 0.08em; color: var(--muted); margin: 44px 0 12px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin: 0 0 6px; }
+  .note { color: var(--muted); font-size: 0.95rem; }
+  a { color: var(--accent); }
+  .meta { font: 0.85rem/1.4 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color: var(--muted);
+          margin: 0 0 28px; }
+  .paper { margin: 0 0 26px; }
+  .paper .title { font-weight: 600; text-decoration: none; }
+  .paper .title:hover { text-decoration: underline; }
+  .paper .num { color: var(--muted); }
+  .paper .authors, .paper .scores { font: 0.85rem/1.45 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+                                    color: var(--muted); }
+  .paper .summary { margin: 4px 0 2px; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted);
+           font-size: 0.95rem; }
+</style>
+</head>
+<body data-date="2026-11-04">
+<main>
+  <nav><label><select id="past" aria-label="Show the digest from another day">
+    <option value="">Past digests…</option></select></label>
+  <script>
+  (function () {
+    var sel = document.getElementById("past"), here = document.body.dataset.date || "";
+    fetch("/archive/dates.json", {cache: "no-cache"}).then(function (r) { return r.json(); }).then(function (dates) {
+      dates.forEach(function (d) {
+        var o = document.createElement("option");
+        o.value = d;
+        o.textContent = new Date(d + "T12:00:00").toLocaleDateString(undefined,
+          {weekday: "short", year: "numeric", month: "short", day: "numeric"});
+        if (d === here) o.selected = true;
+        sel.appendChild(o);
+      });
+    }).catch(function () {});
+    sel.addEventListener("change", function () {
+      if (sel.value) location.href = "/archive/" + sel.value + ".html";
+    });
+  })();
+  </script><span class="spacer"></span><a href="/">Latest</a><a href="/about/">About</a></nav>
+  <h1>wetboiz Daily Digest</h1>
+  <p class="lede">A daily digest of new arXiv papers in quantum gravity and nearby fields.</p>
+  <p class="meta">Wednesday, November 4, 2026 &middot; New submissions: hep-th 36 · gr-qc 29 · hep-ph 34 · astro-ph.CO 13 · 10 picked</p>
+  <div class="paper">
+    <div><span class="num">1.</span> <a class="title" href="https://arxiv.org/abs/2611.03781">Worldsheet functional RG and the $α&#x27;$-tower</a></div>
+    <div class="authors">Ivano Basile, Francesco Ferrarin, Alessia Platania, Matteo Zatti &middot; 2611.03781 [hep-th]</div>
+    <div class="summary">The authors apply the functional RG (Wetterich equation) to the bosonic string worldsheet, deriving beta functions for the background fields in a two-derivative truncation and an all-orders-in-alpha-prime truncation. The latter reproduces Tseytlin&#x27;s spacetime action and is used to find Schwarzschild-like and Einstein solutions.</div>
+    <div class="scores">relevance 7 &middot; quality 8 &middot; Worldsheet functional RG, effective asymptotic safety in string theory; matches wanted paper.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">2.</span> <a class="title" href="https://arxiv.org/abs/2611.05051">A Note On Lattice Definition of Gauge Theories With Chiral Fermions</a></div>
+    <div class="authors">Edward Witten &middot; 2611.05051 [hep-lat, hep-ph, hep-th] (cross-list)</div>
+    <div class="summary">The paper gives a variant of Craig&#x27;s lattice regularization of chiral gauge theories, interpolating the lattice gauge field to the continuum and coupling it to continuum chiral fermions via the eta-invariant. It argues this works for any gauge group and anomaly-free representation and is computable in principle but not by Monte Carlo.</div>
+    <div class="scores">relevance 6 &middot; quality 9 &middot; Lattice chiral gauge theories; reader wanted this paper.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">3.</span> <a class="title" href="https://arxiv.org/abs/2611.03789">Inner Product of Closed Universe from Gravitational Path-integral</a></div>
+    <div class="authors">Masamichi Miyaji, Sunil Sake, Kotaro Shinmyo &middot; 2611.03789 [hep-th]</div>
+    <div class="summary">The paper derives the inner product and Hilbert space of a closed universe in AdS and dS JT gravity directly from the gravitational path integral, showing the co-invariant and invariant spaces of refined algebraic quantization come from different boundary gauge fixings. It computes the inner product exactly for fixed topology and lapse contour.</div>
+    <div class="scores">relevance 6 &middot; quality 8 &middot; Gravitational path-integral inner product, BFV-BRST quantization of JT gravity.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">4.</span> <a class="title" href="https://arxiv.org/abs/2611.04978">Weyl Rescalings: A First Order Approach</a></div>
+    <div class="authors">L. Andrianopoli, J. Zanelli &middot; 2611.04978 [hep-th, gr-qc]</div>
+    <div class="summary">Shows that the apparent mismatch between first-order (vielbein) and second-order Weyl rescalings is resolved by the torsion induced by the rescaling. It then constructs Weyl-invariant first-order actions for scalars, spinors and gauge fields.</div>
+    <div class="scores">relevance 9 &middot; quality 6 &middot; Weyl rescalings in first order gravity, spontaneously broken Weyl symmetry; matches wanted paper.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">5.</span> <a class="title" href="https://arxiv.org/abs/2611.03977">A Ghost-Free dS/AdS Correspondence in $\mathcal{N}=1$ Supergravity</a></div>
+    <div class="authors">Omer Guleryuz &middot; 2611.03977 [hep-th, gr-qc]</div>
+    <div class="summary">Constructs a Z2 reflection of the nilpotent goldstino Kahler metric in N=1 supergravity that maps a ghost-free dS theory to a ghost-free AdS theory with V -&gt; -V pointwise. It derives a spectrum dictionary and the stability window 0 &lt;= m^2 &lt;= 9H^2/4, then applies it to anti-D3 uplifts and inflation models.</div>
+    <div class="scores">relevance 8 &middot; quality 6 &middot; Ghost-free dS/AdS in N=1 supergravity; matches wanted paper, swampland.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">6.</span> <a class="title" href="https://arxiv.org/abs/2611.03740">Gauge-invariant non-universal scalar couplings in teleparallel gravity</a></div>
+    <div class="authors">Giovanni Otalora, Rudranil Roy &middot; 2611.03740 [gr-qc, astro-ph.CO, hep-th]</div>
+    <div class="summary">The paper builds a gauge-invariant teleparallel theory where a scalar field couples non-universally to the translational gauge potential through a Stueckelberg-completed scalar-sector tetrad. In FLRW cosmology it finds kination and potential-dominated regimes and late-time solutions approaching de Sitter with a subdominant matter-like term.</div>
+    <div class="scores">relevance 7 &middot; quality 6 &middot; Teleparallel gravity with non-universal scalar couplings, cosmology; modified gravity theory.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">7.</span> <a class="title" href="https://arxiv.org/abs/2611.05112">Linear perturbation theory and structure formation in a Horndeski theory of gravity without dark matter</a></div>
+    <div class="authors">Lorenzo Gervani, Antonaldo Diaferio, Francesco Pace &middot; 2611.05112 [astro-ph.CO, gr-qc]</div>
+    <div class="summary">Builds a Horndeski generalization of Refracted Gravity without dark matter, checks the background expansion, and develops linear perturbations and the growth equation. The model reproduces H(z) but predicts structure formation that begins too late (z below about 1), so it fails.</div>
+    <div class="scores">relevance 6 &middot; quality 7 &middot; Horndeski scalar-tensor theory without dark matter, perturbations.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">8.</span> <a class="title" href="https://arxiv.org/abs/2611.04750">Particle dynamics in rotating charged Bumblebee black holes: An analytical correspondence with Kerr-Newman</a></div>
+    <div class="authors">Deyou Chen, Chuang Yang &middot; 2611.04750 [gr-qc, hep-th]</div>
+    <div class="summary">Shows that equatorial spinless and spinning test-particle motion in a slowly rotating charged Bumblebee black hole maps onto an effective Kerr-Newman spacetime. Circular-orbit radii and angular velocities match, while radial velocities and Lyapunov exponents pick up Lorentz-violation-dependent factors.</div>
+    <div class="scores">relevance 6 &middot; quality 6 &middot; Rotating charged bumblebee black holes; Lorentz-violating gravity solutions.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">9.</span> <a class="title" href="https://arxiv.org/abs/2611.03783">GUT Color-Triplet Around the Corner: The Story of an Overlooked Lightness</a></div>
+    <div class="authors">Gia Dvali, Manuel Ettengruber, Anna Jankowsky, Tongxuan Zhang &middot; 2611.03783 [hep-ph, hep-th]</div>
+    <div class="summary">The paper builds explicit supersymmetric SO(10) models in which the light color-triplet Higgs partner couples to Standard Model fields only through supergravity-induced VEV shifts of order m_3/2/M_GUT or smaller. This gives lifetimes of about a second (Model I) or far beyond the age of the Universe (Model II), and the authors also argue the vacua obey no-de Sitter and Minkowski-safety criteria.</div>
+    <div class="scores">relevance 3 &middot; quality 7 &middot; SO(10) GUT doublet-triplet splitting; phenomenology, with minor swampland-ish remarks.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">10.</span> <a class="title" href="https://arxiv.org/abs/2611.05089">Scale-Dependent Weak-Field Dynamics in Horndeski Theory: Galaxy Rotation Curves and Turnaround Scales</a></div>
+    <div class="authors">Hatice Özer &middot; 2611.05089 [gr-qc]</div>
+    <div class="summary">Studies weak-field solutions of a gravitational-wave-compatible cubic Horndeski model with Vainshtein screening and derives rotation-curve modifications, gravitational slip, and a turnaround radius. The scalar effect is localized near the Vainshtein scale and does not give asymptotically flat rotation curves.</div>
+    <div class="scores">relevance 6 &middot; quality 5 &middot; Horndeski weak-field dynamics and scalar-tensor modified gravity solutions.</div>
+  </div>
+  <footer>
+    Questions or suggestions: <a href="mailto:dr.scout@wetboiz.com">dr.scout@wetboiz.com</a>.
+    To stop receiving the digest, use the Unsubscribe button at the bottom of any email.
+  </footer>
+</main>
+</body>
+</html>

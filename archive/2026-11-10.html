@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wetboiz Daily Digest · Tuesday, November 10, 2026</title>
+<meta name="description" content="A daily digest of new arXiv papers in quantum gravity and nearby fields.">
+<style>
+  :root { --bg: #fbfaf7; --fg: #1d1d1b; --muted: #66645e; --line: #e2dfd6; --accent: #1a4fa0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16171a; --fg: #e6e4de; --muted: #9b988f; --line: #2c2d31; --accent: #8cb4f5; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 17px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 72px; }
+  nav { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; flex-wrap: wrap;
+        font: 0.9rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  nav .spacer { flex: 1; }
+  nav select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line);
+               border-radius: 6px; padding: 4px 6px; max-width: 100%; }
+  nav a { color: var(--muted); text-decoration: none; }
+  nav a:hover { color: var(--accent); }
+  h1 { font-size: 2.1rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); margin: 0 0 32px; font-size: 1.05rem; }
+  h2 { font: 600 0.8rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; text-transform: uppercase;
+       letter-spacing: 0.08em; color: var(--muted); margin: 44px 0 12px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin: 0 0 6px; }
+  .note { color: var(--muted); font-size: 0.95rem; }
+  a { color: var(--accent); }
+  .meta { font: 0.85rem/1.4 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color: var(--muted);
+          margin: 0 0 28px; }
+  .paper { margin: 0 0 26px; }
+  .paper .title { font-weight: 600; text-decoration: none; }
+  .paper .title:hover { text-decoration: underline; }
+  .paper .num { color: var(--muted); }
+  .paper .authors, .paper .scores { font: 0.85rem/1.45 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+                                    color: var(--muted); }
+  .paper .summary { margin: 4px 0 2px; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted);
+           font-size: 0.95rem; }
+</style>
+</head>
+<body data-date="2026-11-10">
+<main>
+  <nav><label><select id="past" aria-label="Show the digest from another day">
+    <option value="">Past digests…</option></select></label>
+  <script>
+  (function () {
+    var sel = document.getElementById("past"), here = document.body.dataset.date || "";
+    fetch("/archive/dates.json", {cache: "no-cache"}).then(function (r) { return r.json(); }).then(function (dates) {
+      dates.forEach(function (d) {
+        var o = document.createElement("option");
+        o.value = d;
+        o.textContent = new Date(d + "T12:00:00").toLocaleDateString(undefined,
+          {weekday: "short", year: "numeric", month: "short", day: "numeric"});
+        if (d === here) o.selected = true;
+        sel.appendChild(o);
+      });
+    }).catch(function () {});
+    sel.addEventListener("change", function () {
+      if (sel.value) location.href = "/archive/" + sel.value + ".html";
+    });
+  })();
+  </script><span class="spacer"></span><a href="/">Latest</a><a href="/about/">About</a></nav>
+  <h1>wetboiz Daily Digest</h1>
+  <p class="lede">A daily digest of new arXiv papers in quantum gravity and nearby fields.</p>
+  <p class="meta">Tuesday, November 10, 2026 &middot; New submissions: hep-th 43 · gr-qc 40 · hep-ph 59 · astro-ph.CO 15 · 16 picked</p>
+  <div class="paper">
+    <div><span class="num">1.</span> <a class="title" href="https://arxiv.org/abs/2611.10128">The Ghost and Its Secret Partner</a></div>
+    <div class="authors">Luca Buoninfante &middot; 2611.10128 [hep-th, gr-qc]</div>
+    <div class="summary">Argues that the complex-conjugate poles of a ghost propagator above the multi-particle threshold imply a hidden asymptotic composite state coupled to the ghost. Applies this to quadratic gravity, where the spin-two ghost cannot appear as an isolated asymptotic state.</div>
+    <div class="scores">relevance 10 &middot; quality 7 &middot; Ghost in quadratic gravity, indefinite-norm states, unitarity.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">2.</span> <a class="title" href="https://arxiv.org/abs/2611.10326">An RG perspective on the (un)naturalness of Starobinsky inflation</a></div>
+    <div class="authors">Francesca Campani, Francesco Ferrarin, Serena Giardino, Alessia Platania &middot; 2611.10326 [hep-th]</div>
+    <div class="summary">The paper follows asymptotically safe f(R) RG trajectories from the UV fixed point down to inflationary scales to test whether a large R^2 coupling implies equally large higher-order couplings. It finds comparable dimensionless couplings in the UV but canonical suppression of higher-order terms at sub-Planckian scales, leaving small calculable deviations from Starobinsky predictions.</div>
+    <div class="scores">relevance 10 &middot; quality 7 &middot; Starobinsky inflation R^2 naturalness via asymptotic safety RG.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">3.</span> <a class="title" href="https://arxiv.org/abs/2611.12483">Direct product geometries in $n$-dimensional linear, quadratic, and conformal gravity</a></div>
+    <div class="authors">Petr Jizba, Tereza Lehečková &middot; 2611.12483 [gr-qc, hep-th, math-ph]</div>
+    <div class="summary">The paper classifies direct-product spacetimes of (m1+m2), (2+m) and (2+...+2) type in Einstein gravity, pure quadratic gravity and a higher-dimensional conformal gravity, allowing nonconstant curvature in the 2D factors. It finds that the allowed geometries depend on the theory and on the quadratic couplings, and that standard static black holes are absent from the direct-product sector of this conformal gravity for n&gt;4.</div>
+    <div class="scores">relevance 9 &middot; quality 7 &middot; Exact solutions in quadratic and conformal gravity.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">4.</span> <a class="title" href="https://arxiv.org/abs/2611.12698">On Thermodynamic Role of the Gauss-Bonnet Topological Term</a></div>
+    <div class="authors">Marek Liška, David Kubiznak &middot; 2611.12698 [hep-th, gr-qc]</div>
+    <div class="summary">The paper revisits whether the 4D Gauss-Bonnet topological term shifts black hole entropy, showing the answer depends on the choice of horizon boundary action and that a suitable choice makes the Wald entropy reproduce the Jacobson-Myers entropy. It also shows the term changes the Hawking-Page critical temperature and, for positive coupling, can make the transition zeroth-order at high pressure.</div>
+    <div class="scores">relevance 6 &middot; quality 8 &middot; Gauss-Bonnet term in 4D gravity, entropy and Hawking-Page thermodynamics.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">5.</span> <a class="title" href="https://arxiv.org/abs/2611.12482">Cubic Curvature Corrections to Taub-NUT-AdS Black Holes and Their Thermodynamics</a></div>
+    <div class="authors">Yu-Qi Chen, Hai-Shan Liu, Hong Lu &middot; 2611.12482 [hep-th, gr-qc]</div>
+    <div class="summary">Constructs the first-order cubic-curvature corrected Taub-NUT-AdS black hole and derives its temperature and Wald entropy. The Gibbs free energy, mass and NUT charge are fixed by two improved Reall-Santos methods, which agree.</div>
+    <div class="scores">relevance 6 &middot; quality 7 &middot; Cubic curvature corrections to Taub-NUT-AdS black holes and thermodynamics.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">6.</span> <a class="title" href="https://arxiv.org/abs/2611.10116">Scale-separated quasi-dS and the Swampland</a></div>
+    <div class="authors">Rafael Álvarez-García, Ivano Basile, Shi Chen, Cumrun Vafa &middot; 2611.10116 [hep-th]</div>
+    <div class="summary">Tests whether scale-separated quasi-de Sitter solutions can be controlled in M-theory compactifications on hyperbolic and rigid Riemann-flat manifolds once Casimir energy is included. Finds that the potential slope cannot fall below the TCC value within EFT control, except possibly in an order-one bulk region where control is lost.</div>
+    <div class="scores">relevance 5 &middot; quality 8 &middot; Swampland dS conjecture/TCC in M-theory compactifications.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">7.</span> <a class="title" href="https://arxiv.org/abs/2611.11686">Nonlinear Scalarization of Reissner-Nordström Black Holes in Scalar-Torsion-Maxwell Teleparallel Gravity</a></div>
+    <div class="authors">Joaquín Robledo, Yerko Vásquez, P. A. González &middot; 2611.11686 [gr-qc, hep-th]</div>
+    <div class="summary">The paper studies nonlinear scalarization of Reissner-Nordstrom black holes in scalar-torsion-Maxwell teleparallel gravity with quartic and sixth-order couplings. It constructs numerically hairy charged black holes, classifies them by scalar node number, and finds that the higher-order coupling suppresses higher-node branches.</div>
+    <div class="scores">relevance 8 &middot; quality 6 &middot; Scalar-torsion teleparallel gravity black hole scalarization solutions.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">8.</span> <a class="title" href="https://arxiv.org/abs/2611.10121">Emergent de Sitter Universes in Non-Hermitian Holography</a></div>
+    <div class="authors">Daniel Areán, Suman Das, David Garcia-Fariña, Juan F. Pedraza &middot; 2611.10121 [hep-th, gr-qc]</div>
+    <div class="summary">The authors construct asymptotically AdS black holes in PT-symmetric non-Hermitian holography whose interiors bounce and approach an expanding de Sitter phase behind a single horizon. They relate AdS boundary observables (stress tensor, two-sided correlators, complexity, shockwaves) to dS/CFT and static-patch holography.</div>
+    <div class="scores">relevance 7 &middot; quality 7 &middot; Non-Hermitian holography with emergent de Sitter interiors.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">9.</span> <a class="title" href="https://arxiv.org/abs/2611.12204">Einstein--Yang--Mills Plane Waves: Uniqueness and an Exact Curvature Double Copy</a></div>
+    <div class="authors">Metin Gurses, Tahsin Cagri Sisman, Bayram Tekin &middot; 2611.12204 [hep-th, gr-qc]</div>
+    <div class="summary">The paper studies Coleman&#x27;s non-abelian Yang-Mills plane waves coupled to gravity in D dimensions. It shows the linear-profile wave is the unique one with bounded energy density and the unique one whose Riemann tensor equals the color-squared field strength, builds AdS families, and shows spherical transverse spaces give singular solutions.</div>
+    <div class="scores">relevance 6 &middot; quality 8 &middot; Einstein-Yang-Mills plane waves, exact solutions in quadratic and Gauss-Bonnet gravity.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">10.</span> <a class="title" href="https://arxiv.org/abs/2611.10303">The Gribov problem on the horizon: A short guide to the Gribov-Zwanziger framework and its refinement</a></div>
+    <div class="authors">Antonio D. Pereira &middot; 2611.10303 [hep-th, hep-lat, hep-ph]</div>
+    <div class="summary">A short review of Gribov copies in Landau-gauge Yang-Mills theory, the Gribov-Zwanziger action, and its refinement with dimension-two condensates, which gives decoupling-type propagators matching lattice data. It also surveys applications and open questions.</div>
+    <div class="scores">relevance 7 &middot; quality 6 &middot; Gribov problem and Faddeev-Popov gauge fixing review.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">11.</span> <a class="title" href="https://arxiv.org/abs/2611.10584">ERG, axions, and a PT-symmetric accelerating Universe</a></div>
+    <div class="authors">Nick E. Mavromatos, Sarben Sarkar &middot; 2611.10584 [gr-qc, hep-th]</div>
+    <div class="summary">Conjectures that singularities in ERG beta functions for axion-photon couplings signal a transition to a PT-symmetric gravity phase with repulsive Newton constant. They suggest this could drive late-time acceleration without dark energy.</div>
+    <div class="scores">relevance 7 &middot; quality 5 &middot; PT-symmetric gravity with axions and Chern-Simons terms, accelerating universe.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">12.</span> <a class="title" href="https://arxiv.org/abs/2611.10616">Scalar-tensor reconstruction of coherent quantum black holes</a></div>
+    <div class="authors">R. Casadio, A. Giusti, R. da Rocha &middot; 2611.10616 [gr-qc, hep-th]</div>
+    <div class="summary">The paper reconstructs the scalar-tensor and Horndeski actions that reproduce a Gaussian-smeared coherent-state Schwarzschild geometry. It finds the kinetic term is positive only in finite radial domains, and that neither reconstruction covers the horizon or arbitrarily large parts of the interior and exterior.</div>
+    <div class="scores">relevance 6 &middot; quality 6 &middot; Scalar-tensor and Horndeski reconstruction of quantum-corrected black holes.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">13.</span> <a class="title" href="https://arxiv.org/abs/2611.12765">Quality time in extra dimensions: axion quality and radion cosmology</a></div>
+    <div class="authors">Falguni Biswas, Yeshan Juberi, Ahmed Rakin Kamal &middot; 2611.12765 [hep-ph, astro-ph.CO, hep-th]</div>
+    <div class="summary">The paper studies axion quality in a five-dimensional circle compactification with a dynamical radius stabilised by Casimir energy. It finds Minkowski and de Sitter minima with residual strong CP angle around 1e-17, then works out radion decay and reheating and how the resulting entropy dilutes the axion abundance.</div>
+    <div class="scores">relevance 6 &middot; quality 6 &middot; Five-dimensional circle compactification, radion, higher-form symmetries; mostly axion phenomenology though.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">14.</span> <a class="title" href="https://arxiv.org/abs/2611.12772">Gravitational waves and the exit from de Sitter in Inflation without an Inflaton</a></div>
+    <div class="authors">Daniele Bertacca, Raul Jimenez, Sabino Matarrese, Mariam Abdelaziz, Marisol Traforetti &middot; 2611.12772 [astro-ph.CO, gr-qc, hep-th]</div>
+    <div class="summary">The paper examines second-order graviton-induced curvature in de Sitter and finds that tensor modes do not receive the same enhancement as the scalar. It then follows the curvature through an exit into radiation domination, assuming a global clock, and predicts 31 &lt; N_w &lt; 50 with tensor-to-scalar ratio between 3e-6 and 0.036.</div>
+    <div class="scores">relevance 6 &middot; quality 5 &middot; Primordial tensor spectrum and gravitational waves in graviton-driven inflation; r predictions.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">15.</span> <a class="title" href="https://arxiv.org/abs/2611.11323">Stanley Deser 19th March 1931 - 21st April 2023</a></div>
+    <div class="authors">M. J. Duff, K. S. Stelle &middot; 2611.11323 [hep-th, gr-qc, physics.hist-ph]</div>
+    <div class="summary">A biographical memoir of Stanley Deser covering his life, his work on the ADM formalism, supergravity, non-renormalizability and 3D gravity, and his honours.</div>
+    <div class="scores">relevance 3 &middot; quality 6 &middot; Obituary of Stanley Deser; gravity history, no topic content.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">16.</span> <a class="title" href="https://arxiv.org/abs/2611.10036">Magnetohydrodynamic spectra and line invariants in the presence of axions</a></div>
+    <div class="authors">P. M. Akhmetiev, M. S. Dvornikov, A. Yu. Smirnov &middot; 2611.10036 [physics.plasm-ph, astro-ph.HE, astro-ph.SR, hep-ph] (cross-list)</div>
+    <div class="summary">Studies mean-field magnetic equations with an axion term and relates two types of MHD spectra (Kraichnan-like and Kolmogorov-like) to asymptotic ergodic invariants of field lines. Suggests the Kolmogorov case defines a new axion-driven dynamo.</div>
+    <div class="scores">relevance 1 &middot; quality 5 &middot; Axion magnetohydrodynamics; unrelated to listed topics.</div>
+  </div>
+  <footer>
+    Questions or suggestions: <a href="mailto:dr.scout@wetboiz.com">dr.scout@wetboiz.com</a>.
+    To stop receiving the digest, use the Unsubscribe button at the bottom of any email.
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wetboiz Daily Digest · Tuesday, November 3, 2026</title>
+<meta name="description" content="A daily digest of new arXiv papers in quantum gravity and nearby fields.">
+<style>
+  :root { --bg: #fbfaf7; --fg: #1d1d1b; --muted: #66645e; --line: #e2dfd6; --accent: #1a4fa0; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #16171a; --fg: #e6e4de; --muted: #9b988f; --line: #2c2d31; --accent: #8cb4f5; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 17px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 72px; }
+  nav { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; flex-wrap: wrap;
+        font: 0.9rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  nav .spacer { flex: 1; }
+  nav select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line);
+               border-radius: 6px; padding: 4px 6px; max-width: 100%; }
+  nav a { color: var(--muted); text-decoration: none; }
+  nav a:hover { color: var(--accent); }
+  h1 { font-size: 2.1rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); margin: 0 0 32px; font-size: 1.05rem; }
+  h2 { font: 600 0.8rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; text-transform: uppercase;
+       letter-spacing: 0.08em; color: var(--muted); margin: 44px 0 12px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin: 0 0 6px; }
+  .note { color: var(--muted); font-size: 0.95rem; }
+  a { color: var(--accent); }
+  .meta { font: 0.85rem/1.4 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color: var(--muted);
+          margin: 0 0 28px; }
+  .paper { margin: 0 0 26px; }
+  .paper .title { font-weight: 600; text-decoration: none; }
+  .paper .title:hover { text-decoration: underline; }
+  .paper .num { color: var(--muted); }
+  .paper .authors, .paper .scores { font: 0.85rem/1.45 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+                                    color: var(--muted); }
+  .paper .summary { margin: 4px 0 2px; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted);
+           font-size: 0.95rem; }
+</style>
+</head>
+<body data-date="2026-11-03">
+<main>
+  <nav><label><select id="past" aria-label="Show the digest from another day">
+    <option value="">Past digests…</option></select></label>
+  <script>
+  (function () {
+    var sel = document.getElementById("past"), here = document.body.dataset.date || "";
+    fetch("/archive/dates.json", {cache: "no-cache"}).then(function (r) { return r.json(); }).then(function (dates) {
+      dates.forEach(function (d) {
+        var o = document.createElement("option");
+        o.value = d;
+        o.textContent = new Date(d + "T12:00:00").toLocaleDateString(undefined,
+          {weekday: "short", year: "numeric", month: "short", day: "numeric"});
+        if (d === here) o.selected = true;
+        sel.appendChild(o);
+      });
+    }).catch(function () {});
+    sel.addEventListener("change", function () {
+      if (sel.value) location.href = "/archive/" + sel.value + ".html";
+    });
+  })();
+  </script><span class="spacer"></span><a href="/">Latest</a><a href="/about/">About</a></nav>
+  <h1>wetboiz Daily Digest</h1>
+  <p class="lede">A daily digest of new arXiv papers in quantum gravity and nearby fields.</p>
+  <p class="meta">Tuesday, November 3, 2026 &middot; New submissions: hep-th 36 · gr-qc 43 · hep-ph 55 · astro-ph.CO 16 · 17 picked</p>
+  <div class="paper">
+    <div><span class="num">1.</span> <a class="title" href="https://arxiv.org/abs/2611.00366">5d SCFTs and Intersection Theory of Generalized Toric Threefolds</a></div>
+    <div class="authors">Hülya Argüz, Antoine Bourget, Pierrick Bousseau, Julius F. Grimminger, Sakura Schafer-Nameki &middot; 2611.00366 [hep-th]</div>
+    <div class="summary">Develops intersection theory for generalized toric Calabi-Yau threefolds and gives an algorithm computing triple intersection numbers, hence the 5d prepotential, from generalized toric polygon data. Checks it on examples including SU(4) with an antisymmetric and 7 flavors, recovering the Chern-Simons level, and releases Mathematica code.</div>
+    <div class="scores">relevance 10 &middot; quality 8 &middot; 5d SCFTs, generalized toric threefolds prepotential; core.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">2.</span> <a class="title" href="https://arxiv.org/abs/2611.00206">Generalized Toric Threefolds from Scattering Diagrams and Broken Lines</a></div>
+    <div class="authors">Antoine Bourget, Ignacio Carreño Bolla, Quentin Lamouret &middot; 2611.00206 [hep-th]</div>
+    <div class="summary">The paper gives an explicit scattering-diagram and broken-line description of generalized toric Calabi-Yau threefolds from 5-brane webs ending on 7-branes. It builds affine charts and gluing maps, and uses them to study Hanany-Witten moves, divisors, triple intersections and the Euler characteristic.</div>
+    <div class="scores">relevance 10 &middot; quality 7 &middot; Generalized toric threefolds, 5-brane webs with 7-branes; core.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">3.</span> <a class="title" href="https://arxiv.org/abs/2611.00196">Non-Invertible Charges for M-Theory</a></div>
+    <div class="authors">Kenneth Intriligator, Aiden Sheckler, Eric Y. Yang &middot; 2611.00196 [hep-th]</div>
+    <div class="summary">The authors model the gauge charges of M2 and M5 branes as non-invertible charge defects of a &#x27;pseudo 6-group&#x27;. They show that this model reproduces features such as Hanany-Witten moves, singleton decomposition of M5-brane worldvolume theories and M5/anti-M5 couplings.</div>
+    <div class="scores">relevance 7 &middot; quality 8 &middot; Non-invertible charges for M-theory branes; wanted in digest.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">4.</span> <a class="title" href="https://arxiv.org/abs/2611.02120">Dimensionally Regulated Graviton Self-Energy from Gravitons on de Sitter</a></div>
+    <div class="authors">B. Yesilyurt, N. C. Tsamis, R. P. Woodard &middot; 2611.02120 [gr-qc, hep-th]</div>
+    <div class="summary">The paper computes the dimensionally regulated, BPHZ-renormalized one-loop graviton self-energy on de Sitter in a simple gauge. It uses it to correct the gravitational wave mode function and the Newtonian potential, finding that the potential grows like the cube of the number of e-foldings.</div>
+    <div class="scores">relevance 7 &middot; quality 8 &middot; Graviton self-energy on de Sitter; matches wanted paper.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">5.</span> <a class="title" href="https://arxiv.org/abs/2611.00687">A note on the quantization of M2-branes on local Calabi-Yau manifolds</a></div>
+    <div class="authors">Yutong Huang, Qinjian Lou, Jiahua Tian, Yi-Nan Wang &middot; 2611.00687 [hep-th, math-ph]</div>
+    <div class="summary">Revisits the quantization of M2-branes wrapping curves in local Calabi-Yau threefolds from the supermembrane action, interpreting refined Gopakumar-Vafa invariants through the moduli space and Jacobian fibration, with examples such as generalized conifolds. It also sketches the CY4 case, where the quantum mechanics is of N=2B type, for genus-zero curves.</div>
+    <div class="scores">relevance 9 &middot; quality 7 &middot; M2-branes on local CY, 5d SCFT BPS states; core.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">6.</span> <a class="title" href="https://arxiv.org/abs/2611.03510">I want to Break Free: The Positive Side of Symmetry Breaking</a></div>
+    <div class="authors">Anubha Bal, Claudia de Rham &middot; 2611.03510 [hep-th]</div>
+    <div class="summary">The paper classifies derivative operators of N-scalar EFTs by the internal symmetry subgroups of O(N) they preserve, and uses 2-2 and 3-3 positivity bounds on superposition states to show that coefficients of symmetry-breaking operators are bounded by those of symmetry-preserving ones. Examples include O(8) to U(4) and O(7) to G2 cascades.</div>
+    <div class="scores">relevance 5 &middot; quality 8 &middot; Positivity bounds in EFT; the reader wanted this paper before.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">7.</span> <a class="title" href="https://arxiv.org/abs/2611.02190">A Singularity Theorem for Quasi-Topological Gravities</a></div>
+    <div class="authors">Francesco Di Filippo &middot; 2611.02190 [gr-qc]</div>
+    <div class="summary">Proves that spherical collapse with matter obeying the null energy condition leads to null geodesic incompleteness in the known quasi-topological gravities, provided h&#x27;(psi) &gt; 0. Regular vacuum black holes in these theories therefore do not make collapse predictive.</div>
+    <div class="scores">relevance 8 &middot; quality 6 &middot; Singularity theorem for quasi-topological gravities; matches a wanted paper.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">8.</span> <a class="title" href="https://arxiv.org/abs/2611.00209">An obstruction to generalised discrete torsion in string theory</a></div>
+    <div class="authors">Carlo Angelantonj, Giorgio Leone, Diego Perugini &middot; 2611.00209 [hep-th]</div>
+    <div class="summary">The paper shows that point-wise generalised discrete torsion in T^6/Z_2^2 and T^7/Z_2^3 orbifolds, though modular invariant at genus one, gives an inconsistent spectrum and breaks genus-two modular invariance. Only Vafa&#x27;s standard discrete torsion survives.</div>
+    <div class="scores">relevance 6 &middot; quality 8 &middot; Discrete torsion obstruction in string orbifolds; wanted in digest.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">9.</span> <a class="title" href="https://arxiv.org/abs/2611.00235">Reconstructing string dualities through symmetries of moduli spaces</a></div>
+    <div class="authors">Ignacio Ruiz, Germán Varona &middot; 2611.00235 [hep-th]</div>
+    <div class="summary">Uses the symmetries of moduli spaces together with the Emergent String Conjecture to constrain which duality frames can appear in asymptotic regions. For 32 and 16 supercharges this reproduces exactly the known toroidal compactifications, and for less SUSY it leaves a few unexplained extra possibilities.</div>
+    <div class="scores">relevance 6 &middot; quality 8 &middot; Moduli space dualities, emergent string conjecture; swampland-adjacent; wanted similar.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">10.</span> <a class="title" href="https://arxiv.org/abs/2611.02084">Black Hole Love Numbers with Physics-Informed Neural Networks</a></div>
+    <div class="authors">Maria J. Rodriguez, Luis Fernando Temoche, Pavlos Protopapas &middot; 2611.02084 [gr-qc, cs.LG, hep-th, math.NA]</div>
+    <div class="summary">The authors train a physics-informed neural network with an H^2 Sobolev loss to solve the static Kerr perturbation equation and extract the tidal Love number from the asymptotic coefficients. They recover the dissipative response to relative errors below 1e-5 and compare eight extraction methods.</div>
+    <div class="scores">relevance 6 &middot; quality 6 &middot; Black hole Love numbers with PINNs; matches a wanted paper title.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">11.</span> <a class="title" href="https://arxiv.org/abs/2611.00413">Strong-coupling of Minkowski spacetime in $f(R)$ gravity: a Hamiltonian perspective</a></div>
+    <div class="authors">Aldair Pantoja &middot; 2611.00413 [gr-qc]</div>
+    <div class="summary">Performs a Hamiltonian constraint analysis of f(R) gravity perturbed around Minkowski space and counts degrees of freedom for the degenerate and non-degenerate cases. It reproduces the known result that R0-degenerate models are strongly coupled with no propagating modes, while non-degenerate ones have 3 or 2.</div>
+    <div class="scores">relevance 8 &middot; quality 5 &middot; Hamiltonian analysis of f(R) gravity, constraints and degrees of freedom.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">12.</span> <a class="title" href="https://arxiv.org/abs/2611.02559">Thermal Festina Lente</a></div>
+    <div class="authors">Fayez Abu-Ajamieh, Nobuchika Okada, Roman Pasechnik, Victoria Venken, Zhi-Wei Wang &middot; 2611.02559 [hep-th, hep-ph]</div>
+    <div class="summary">The paper extends the Festina Lente bound to a thermal bath, getting m greater than about l times (cV/sigma)^(1/4) with l logarithmic in the coupling. It applies this to charged particles, gauged B-L neutrino masses, millicharges, and inflation.</div>
+    <div class="scores">relevance 6 &middot; quality 7 &middot; Festina Lente swampland bound extension; the reader wanted &#x27;Thermal Festina Lente&#x27; before.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">13.</span> <a class="title" href="https://arxiv.org/abs/2611.00136">Remark About Action for Rastall Gravity</a></div>
+    <div class="authors">J. Kluson &middot; 2611.00136 [gr-qc]</div>
+    <div class="summary">Makes Golovnev&#x27;s Rastall gravity action diffeomorphism invariant via deparametrization, introducing a dynamical vector tau^mu. The equations of motion then force constant scalar curvature, which restricts matter to traceless cases and shows the covariant action does not reproduce Rastall gravity in general.</div>
+    <div class="scores">relevance 6 &middot; quality 5 &middot; Action for Rastall gravity; matches wanted note on the same topic.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">14.</span> <a class="title" href="https://arxiv.org/abs/2611.00808">Quantum Black Holes in Non-Linear Electrodynamics</a></div>
+    <div class="authors">Jana Menšíková, David Kubiznak, Robert B. Mann &middot; 2611.00808 [hep-th, gr-qc]</div>
+    <div class="summary">The paper builds charged quantum black holes on a 3D brane from a 4D bulk with RegMax nonlinear electrodynamics, deriving the new counterterms. It then checks the first law and shows the horizon structure can be Schwarzschild-like or Reissner-Nordstrom-like.</div>
+    <div class="scores">relevance 4 &middot; quality 7 &middot; Braneworld holography quantum black holes; similar to wanted quantum black holes paper.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">15.</span> <a class="title" href="https://arxiv.org/abs/2611.00327">Quantum superposition of Cosmic String spacetimes</a></div>
+    <div class="authors">Enrique Arias, Shoshauna Gauvin, Willy Izquierdo, Robert B. Mann &middot; 2611.00327 [gr-qc, hep-th]</div>
+    <div class="summary">Computes the response of an Unruh-DeWitt detector coupled to a massless scalar field in a quantum superposition of two cosmic string spacetimes with integer topological charges N and M. Finds an interference term absent for a classical mixture, with resonances when the image structures of the two branches align.</div>
+    <div class="scores">relevance 7 &middot; quality 5 &middot; Superposition of cosmic string spacetimes as test of quantum gravity.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">16.</span> <a class="title" href="https://arxiv.org/abs/2611.03338">Exact Regular Planar Black Holes solutions in Bumblebee gravity</a></div>
+    <div class="authors">Daniil Stepanenko &middot; 2611.03338 [gr-qc, hep-th]</div>
+    <div class="summary">The paper finds exact planar black hole solutions in bumblebee gravity with temporal and radial vector components, for a quadratic potential with zero cosmological constant and a linear potential with nonzero cosmological constant. The nonminimal coupling is fixed to 1/4 and the curvature invariants are finite at r=0.</div>
+    <div class="scores">relevance 6 &middot; quality 5 &middot; Regular black hole solutions in bumblebee gravity; matches wanted bumblebee papers.</div>
+  </div>
+  <div class="paper">
+    <div><span class="num">17.</span> <a class="title" href="https://arxiv.org/abs/2611.00233">Distance to integrability and complexity</a></div>
+    <div class="authors">Sean Casey, Marius de Leeuw, Tristan McLoughlin, Sergiy Zhuk &middot; 2611.00233 [quant-ph, cond-mat.stat-mech, cond-mat.str-el, hep-th, math-ph, nlin.SI] (cross-list)</div>
+    <div class="summary">The authors classify the 12 families of integrable translation-invariant nearest-neighbour spin-1/2 chains and numerically define a distance from any Hamiltonian to the nearest integrable one. They show that level-spacing statistics and eigenstate entropy interpolate between integrable and chaotic values as this distance grows, with large model-to-model variation, and that the distance constrains early-time Krylov complexity.</div>
+    <div class="scores">relevance 1 &middot; quality 7 &middot; Integrability distance in spin chains; unrelated.</div>
+  </div>
+  <footer>
+    Questions or suggestions: <a href="mailto:dr.scout@wetboiz.com">dr.scout@wetboiz.com</a>.
+    To stop receiving the digest, use the Unsubscribe button at the bottom of any email.
+  </footer>
+</main>
+</body>
+</html>
