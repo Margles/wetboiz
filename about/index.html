@@ -5,51 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About · wetboiz Daily Digest</title>
 <meta name="description" content="A daily digest of new arXiv papers in quantum gravity and nearby fields.">
-<style>
-  :root { --bg: #fbfaf7; --fg: #1d1d1b; --muted: #66645e; --line: #e2dfd6; --accent: #1a4fa0; }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #16171a; --fg: #e6e4de; --muted: #9b988f; --line: #2c2d31; --accent: #8cb4f5; }
-  }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--fg);
-         font: 17px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif; }
-  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 72px; }
-  nav { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; flex-wrap: wrap;
-        font: 0.9rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
-  nav .spacer { flex: 1; }
-  nav select { font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line);
-               border-radius: 6px; padding: 4px 6px; max-width: 100%; }
-  nav a { color: var(--muted); text-decoration: none; }
-  nav a:hover { color: var(--accent); }
-  h1 { font-size: 2.1rem; margin: 0 0 4px; letter-spacing: -0.01em; }
-  .lede { color: var(--muted); margin: 0 0 32px; font-size: 1.05rem; }
-  h2 { font: 600 0.8rem/1.2 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; text-transform: uppercase;
-       letter-spacing: 0.08em; color: var(--muted); margin: 44px 0 12px; }
-  p { margin: 0 0 14px; }
-  ul { margin: 0 0 14px; padding-left: 1.3em; }
-  li { margin: 0 0 6px; }
-  .note { color: var(--muted); font-size: 0.95rem; }
-  a { color: var(--accent); }
-  .meta { font: 0.85rem/1.4 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; color: var(--muted);
-          margin: 0 0 28px; }
-  .paper { margin: 0 0 26px; }
-  .paper .title { font-weight: 600; text-decoration: none; }
-  .paper .title:hover { text-decoration: underline; }
-  .paper .num { color: var(--muted); }
-  .paper .authors, .paper .scores { font: 0.85rem/1.45 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
-                                    color: var(--muted); }
-  .paper .summary { margin: 4px 0 2px; }
-  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted);
-           font-size: 0.95rem; }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 <main>
-  <nav><span class="spacer"></span><a href="/">Latest</a></nav>
-  <h1>wetboiz Daily Digest</h1>
-  <p class="lede">A daily digest of new arXiv papers in quantum gravity and nearby fields.</p>
-  <p>Each weekday morning a script reads the new submissions and cross-lists in hep-th, gr-qc, hep-ph, and
-  astro-ph.CO. Claude reads every title and abstract and rates how well the paper fits the topics listed below.</p>
+  <nav class="topbar"><a href="/">Latest</a><a href="/about/" aria-current="page">About</a></nav>
+  <header class="masthead">
+    <h1><a href="/">wetboiz Daily Digest</a></h1>
+    <p class="lede">A daily digest of new arXiv papers in quantum gravity and nearby fields.</p>
+  </header>
+  <div class="prose">
+  <p>Each weekday morning a script reads the new submissions and cross-lists in <span class="nowrap">hep-th</span>, <span class="nowrap">gr-qc</span>,
+  <span class="nowrap">hep-ph</span>, and <span class="nowrap">astro-ph.CO</span>. Claude reads every title and abstract and rates how well the paper fits the topics listed below.</p>
   <p>The best matches then go through a quality check. Papers by authors in the curator's research network get this
   check too, whatever their topic. Claude reads the beginning and end of each paper and looks at its authors'
   publication records on INSPIRE-HEP. It looks for papers whose claims go well beyond what they actually work out,
@@ -70,6 +40,7 @@
     <li>Inflation and primordial gravitational waves</li>
     <li>Quantum information</li>
   </ul>
+  </div>
   <footer>
     Questions or suggestions: <a href="mailto:dr.scout@wetboiz.com">dr.scout@wetboiz.com</a>.
     To stop receiving the digest, use the Unsubscribe button at the bottom of any email.

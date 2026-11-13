@@ -1,37 +1,12 @@
 // Calendar picker for wetboiz.com digests. Published to /assets/calendar.js by digest/site.py.
 // Mounts on <div id="cal">; reads /archive/dates.json; days with a digest link to /archive/<date>.html,
 // all other days are greyed out. The page's own date comes from <body data-date="YYYY-MM-DD">.
+// Styles are in /assets/site.css (.cal-*).
 (function () {
   "use strict";
   var mount = document.getElementById("cal");
   if (!mount) return;
 
-  var style = document.createElement("style");
-  style.textContent = [
-    ".cal{position:relative}",
-    ".cal-btn{font:inherit;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:6px;",
-    "padding:5px 10px;cursor:pointer;display:inline-flex;align-items:center;gap:7px}",
-    ".cal-btn:hover,.cal-btn[aria-expanded=true]{border-color:var(--muted)}",
-    ".cal-btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.6}",
-    ".cal-pop{position:absolute;top:calc(100% + 6px);left:0;z-index:10;width:272px;max-width:calc(100vw - 32px);",
-    "background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 10px 8px;",
-    "box-shadow:0 8px 24px rgba(0,0,0,.12)}",
-    ".cal-pop[hidden]{display:none}",
-    ".cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;color:var(--fg)}",
-    ".cal-head span{font-weight:600}",
-    ".cal-nav{font:inherit;font-size:1.1rem;line-height:1;width:30px;height:30px;border:none;border-radius:6px;",
-    "background:none;color:var(--fg);cursor:pointer}",
-    ".cal-nav:hover:not(:disabled){background:var(--line)}",
-    ".cal-nav:disabled{opacity:.3;cursor:default}",
-    ".cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center}",
-    ".cal-dow{font-size:.72rem;color:var(--muted);padding:2px 0 4px}",
-    ".cal-day{display:block;padding:6px 0;border-radius:6px;font-size:.85rem;color:var(--muted);opacity:.45}",
-    "a.cal-day{color:var(--accent);opacity:1;text-decoration:none;font-weight:600}",
-    "a.cal-day:hover{background:var(--line)}",
-    ".cal-day.cal-here{background:var(--accent);color:var(--bg)}",
-    ".cal-foot{margin-top:6px;font-size:.72rem;color:var(--muted);text-align:center}"
-  ].join("");
-  document.head.appendChild(style);
 
   var here = document.body.getAttribute("data-date") || "";
   var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
@@ -50,7 +25,7 @@
   btn.setAttribute("aria-expanded", "false");
   btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/>' +
                   '<path d="M3 10h18M8 3v4M16 3v4"/></svg><span></span>';
-  btn.querySelector("span").textContent = here ? label(here) : "Past digests";
+  btn.querySelector("span").textContent = "Other days";
   var pop = document.createElement("div");
   pop.className = "cal-pop";
   pop.hidden = true;
