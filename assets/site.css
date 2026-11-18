@@ -72,9 +72,6 @@ main { max-width: 720px; margin: 0 auto; padding: 0 16px 80px; }
 .paper h3 { margin: 0; font: 600 1.12rem/1.35 var(--serif); }
 .paper h3 a { color: var(--fg); text-decoration: none; }
 .paper h3 a:hover { color: var(--accent); text-decoration: underline; }
-.paper .paper-date { margin: 0 0 4px; font: 500 0.75rem/1.4 var(--sans); }
-.paper .paper-date a { color: var(--faint); text-decoration: none; }
-.paper .paper-date a:hover { color: var(--accent); text-decoration: underline; }
 .paper .authors { margin: 5px 0 0; font: 0.85rem/1.45 var(--sans); color: var(--muted); }
 .paper .summary { margin: 9px 0 0; }
 .tags { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 11px 0 0; font: 0.75rem/1 var(--sans); }
@@ -83,7 +80,9 @@ a.tag { color: var(--accent); text-decoration: none; font-weight: 500; }
 a.tag:hover { background: var(--accent-soft); }
 .tag.score { background: none; border: 1px solid var(--line); }
 .tag.score b { color: var(--fg); font-weight: 600; }
-.tag.ai { cursor: help; }
+.tag.ai, .tag.score { cursor: help; }
+a.tag.date { color: var(--muted); font-weight: 400; }
+a.tag.date:hover { color: var(--accent); }
 .reason { margin: 8px 0 0; font: italic 0.82rem/1.45 var(--sans); color: var(--faint); }
 .empty { padding: 28px 0; color: var(--muted); }
 
