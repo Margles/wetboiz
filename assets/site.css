@@ -142,3 +142,7 @@ a.cal-day:hover { background: var(--accent-soft); }
   .masthead h1 { font-size: 1.75rem; }
   .paper { grid-template-columns: 1.7em 1fr; }
 }
+
+/* KaTeX math in titles and summaries */
+.paper .katex { font-size: 1.04em; }
+.paper .reason .katex { font-size: 1em; }
