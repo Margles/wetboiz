@@ -78,6 +78,8 @@ main { max-width: 720px; margin: 0 auto; padding: 0 16px 80px; }
 .tag { padding: 4px 7px; border-radius: 5px; background: var(--chip); color: var(--muted); white-space: nowrap; }
 a.tag { color: var(--accent); text-decoration: none; font-weight: 500; }
 a.tag:hover { background: var(--accent-soft); }
+.tag.score { background: none; border: 1px solid var(--line); }
+.tag.score b { color: var(--fg); font-weight: 600; }
 .reason { margin: 8px 0 0; font: italic 0.82rem/1.45 var(--sans); color: var(--faint); }
 .empty { padding: 28px 0; color: var(--muted); }
 
