@@ -81,8 +81,6 @@ a.tag:hover { background: var(--accent-soft); }
 .tag.score { background: none; border: 1px solid var(--line); }
 .tag.score b { color: var(--fg); font-weight: 600; }
 .tag.ai, .tag.score { cursor: help; }
-a.tag.date { color: var(--muted); font-weight: 400; }
-a.tag.date:hover { color: var(--accent); }
 .reason { margin: 8px 0 0; font: italic 0.82rem/1.45 var(--sans); color: var(--faint); }
 .empty { padding: 28px 0; color: var(--muted); }
 
